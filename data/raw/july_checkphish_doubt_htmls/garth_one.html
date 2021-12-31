@@ -1,0 +1,189 @@
+<html><head></head><body><canvas id="myCanvas" width="320" height="420"></canvas>
+<script>
+	class Building{
+		constructor(buildingX,buildingY,buildingWidth,buildingHeight,buildingName,buildingColor,entranceX,entranceY,exit){
+			this.x = buildingX;
+			this.y = buildingY;
+			this.width = buildingWidth;
+			this.height = buildingHeight;
+			this.color = buildingColor;
+			this.name = buildingName;
+			this.entranceX = entranceX;
+			this.entranceY = entranceY;
+			this.exit = exit;
+		}
+		CreateInterior(){
+			console.log(name);
+			CreateExit(this.exit.x,this.exit.y,this.exit.exitX,this.exit.exitY);
+		}
+	}
+	class Exit{
+		constructor(x,y,exitX,exitY){
+			this.x=x;
+			this.y=y;
+			this.exitX=exitX;
+			this.exitY=exitY;
+		}
+	}
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	var x = (canvas.width / 2);
+	var y = (canvas.height / 2);
+	var xDest = x;
+	var yDest = y;
+	var characterSize = 20;
+	var currentBuilding = new Building(0,0,0,0,"main","#555555",0,0,new Exit(0,0,0,0));
+/*	var houseX = 20;
+	var houseY = 20;
+	var houseWidth = 60;
+	var houseHeight = 60;
+	var buisnessX = 110;
+	var buisnessY = 20;
+	var buisnessWidth = 120;
+	var buisnessHeight = 60;*/
+	function getMousePosition(canvas, event) { 
+		rect = canvas.getBoundingClientRect(); 
+		xDest = event.clientX - rect.left - (characterSize/2) +1; 
+		yDest = event.clientY - rect.top - (characterSize/2) +1;
+		xDest = Math.round(xDest / 10)*10;
+		yDest = Math.round(yDest / 10)*10;
+		if(xDest < characterSize / 2){
+			xDest = 0;
+		}
+		if(xDest > canvas.width - characterSize){
+			xDest = canvas.width - characterSize;
+		}
+		if(yDest < characterSize / 2){
+			yDest = 0;
+		}
+		if(yDest > canvas.height - (characterSize)){
+			yDest = canvas.height - (characterSize);
+		}
+	}
+	canvas.addEventListener("mousedown", function(e){getMousePosition(canvas,e)});
+	function DrawGrid(){
+		ctx.beginPath();
+		for(var gridX = 0; gridX < canvas.width+1; gridX+=10){
+			ctx.moveTo(gridX,0);
+			ctx.lineTo(gridX,canvas.height);
+			ctx.lineWidth=2;
+			ctx.stroke();
+		}
+		for(var gridY = 0; gridY < canvas.height+1; gridY+=10){
+			ctx.moveTo(0,gridY);
+			ctx.lineTo(canvas.width,gridY);
+			ctx.lineWidth=2;
+			ctx.stroke();
+		}
+	}
+	function DrawCharacter(){
+		ctx.beginPath();
+		ctx.rect(x, y, characterSize, characterSize);
+		ctx.fillStyle = "#00FF00";
+		ctx.fill();
+		ctx.closePath();
+	}
+	function MoveCharacter(){
+		if(x>xDest){
+			x--;
+		}
+		if(x<xDest){
+			x++;
+		}
+		if(y>yDest){
+			y--;
+		}
+		if(y<yDest){
+			y++;
+		}
+	}
+	function DrawBuilding(building){
+		ctx.beginPath();
+		ctx.rect(building.x, building.y, building.width, building.height);
+		ctx.fillStyle = building.color;
+		ctx.fill();
+		if(building.name!="main")
+			ctx.fillText(building.name,building.x,building.y);
+		ctx.closePath();
+	}
+	function CheckBuilding(building){
+		if(x+(characterSize)-1 >= building.x && y+(characterSize)-1 >= building.y && x+1 <= (building.x + building.width) && y+1 <= (building.y + building.height)){
+			console.log(building.name);
+			currentBuilding=building;
+			x=building.entranceX;
+			y=building.entranceY;
+			xDest=x;
+			yDest=y;
+		}
+	}
+	function CreateBuilding(building){
+		DrawBuilding(building);
+		CheckBuilding(building);
+	}
+	function CreateExit(buildingX,buildingY,entranceX,entranceY){
+		CreateBuilding(new Building(buildingX,buildingY,20,10,"main","#330000",entranceX,entranceY,new Exit(0,0,0,0)));
+	}
+	function CreateBuildings(){
+		FillFloor("#222222");
+		CreateBuilding(new Building(20,20,60,60,"house","#FF0000",80,260,new Exit(80,280,40,80)));
+		CreateBuilding(new Building(110,20,120,60,"buisness","#555555",180,260,new Exit(180,280,160,80)));
+		CreateBuilding(new Building(80,190,20,10,"shop","#990099",260,260,new Exit(260,280,80,200)));
+		CreateBuilding(new Building(canvas.width-40,canvas.height-40,40,40,"about us","#009999",10,20,new Exit(10,10,canvas.width-30,canvas.height-60)));
+	}
+	function CreateHouseInterior(){
+		CreateExit(80,280,40,80);
+	}
+	function CreateBuisnessInterior(){
+		CreateExit(180,280,160,80);
+	}
+	function CreateShopInterior(){
+		CreateExit(260,280,80,200);
+	}
+	function CreateAboutUsInterior(){
+		CreateExit(10,10,canvas.width-30,canvas.height-60);
+	}
+	function FillFloor(color){
+		ctx.beginPath();
+		ctx.rect(0,0,canvas.width,canvas.height);
+		ctx.fillStyle=color;
+		ctx.fill();
+		ctx.closePath();
+	}
+	function DrawMap(){
+		FillFloor(currentBuilding.color);
+		if(currentBuilding.name=="main"){
+			CreateBuildings();
+		}
+		else{
+			currentBuilding.CreateInterior();
+		}
+	/*	switch(currentBuilding.name){
+			case "main":
+				CreateBuildings();
+				break;
+			case "house":
+				CreateHouseInterior();
+				break;
+			case "buisness":
+				CreateBuisnessInterior();
+				break;
+			case "shop":
+				CreateShopInterior();
+				break;
+			case "about us":
+				CreateAboutUsInterior();
+				break;
+			default:
+				CreateBuildings();
+		}*/
+	}
+	function Update(){
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		//DrawGrid();
+		DrawMap();
+		DrawCharacter();
+		MoveCharacter();
+		requestAnimationFrame(Update);
+	}
+	Update();
+</script></body></html>

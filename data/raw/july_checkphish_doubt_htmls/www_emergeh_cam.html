@@ -1,0 +1,120 @@
+<html lang="en" dir="ltr"><head>
+        <!-- Google Tag Manager -->
+        <script type="text/javascript" async="" src="https://static.bouncepilot.com/29a38865-21e1-485f-8a85-c343bbbe30fb.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NXNQ2LW"></script><script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NXNQ2LW');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <meta charset="utf-8">
+        <title></title>
+        <!--[if IE]
+            <script src="js/es5-shim.min.js"></script>
+            <script src="js/es5-sham.min.js"></script>
+        <![!endif]-->
+        <!--[if lt IE 8]>
+            <script src="js/json3.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNQ2LW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+    <script>
+        var errFirefox;
+        var queryStringOut = {"cidpubh":"abbaa22c5d4a4123f328ccf060b9dfc5a","sid1":"137","sid2":"14_July_Debut","sid3":"6100e362158aca034ffc9543","sid4":"","tt":"27","pclkid":null};
+        var notApplicable = 'na';
+        var fpRequest = window.XMLHttpRequest ? new XMLHttpRequest : new ActiveXObject("Microsoft.XMLHTTP");
+        var timezone = "undefined" == typeof Intl ? "" : Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+        function isTouchDevice() {
+            var e = " -webkit- -moz- -o- -ms- ".split(" ");
+            return !!("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch) || function(e) {
+                return void 0 !== window.matchMedia && window.matchMedia(e).matches
+            }(["(", e.join("touch-enabled),("), "heartz", ")"].join(""))
+        }
+
+        var adBlockEnabled = function () {
+            var ads = document.createElement('div')
+            ads.innerHTML = '&nbsp;'
+            ads.className = 'adsbox'
+            var result = false
+            try {
+                // body may not exist, that's why we need try/catch
+                document.body.appendChild(ads)
+                result = document.getElementsByClassName('adsbox')[0].offsetHeight === 0
+                document.body.removeChild(ads)
+            } catch (e) {
+                result = false
+            }
+            return result
+        }
+
+        var emulateDeviceSupport = function () {
+            return (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices)
+        }
+
+        try {
+            throw "a"
+        } catch (e) {
+            try {
+                e.toSource(), errFirefox = !0
+            } catch (e) {
+                errFirefox = !1
+            }
+        }
+
+        var fpRoute = "/fp.php",
+            params = {
+                fingerprintParts : {
+                    "languages": navigator.languages,
+                    "language": navigator.language,
+                    "webDriver": navigator.webdriver == null ? notApplicable : navigator.webdriver,
+                    "devicePixelRatio": window.devicePixelRatio || notApplicable,
+                    "localStorage": window.localStorage,
+                    "ua": navigator.userAgent,
+                    "osCpu": navigator.oscpu || notApplicable,
+                    "platform": navigator.platform || notApplicable,
+                    "navigationCpuClass": navigator.cpuClass || notApplicable,
+                    "prodSub": navigator.productSub,
+                    "appName": navigator.appName,
+                    "appVersion": navigator.appVersion,
+                    "tempResource": eval.toString().length,
+                    "plugins": typeof navigator.plugins,
+                    "ffError": errFirefox,
+                    "timezone": timezone,
+                    "timezoneOffset": new Date().getTimezoneOffset(),
+                    "adBlock": adBlockEnabled,
+                    "emulateDeviceSupport": emulateDeviceSupport,
+                    "availWidth": window.screen.availWidth,
+                    "availHeight": window.screen.availHeight,
+                    "width": window.screen.width,
+                    "height": window.screen.height,
+                    "colorDepth": window.screen.colorDepth || notApplicable,
+                    "pixelDepth": window.screen.pixelDepth,
+                    "touchDevice": isTouchDevice(),
+                    "maxTouch": navigator.maxTouchPoints,
+                    "msMaxTouch": navigator.msMaxTouchPoints
+                },
+                urlParams: queryStringOut
+            };
+
+
+            fpRequest.open("POST", fpRoute, !0), fpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), fpRequest.send(JSON.stringify(params)), fpRequest.onreadystatechange = function() {
+                if(fpRequest.readyState == 4 && fpRequest.status == 200)
+                {
+                    var engineResult = JSON.parse(fpRequest.responseText);
+                    var date = new Date();
+                    date.setTime(date.getTime()+(1*24*60*60*1000)); //30 days
+                    document.cookie = "clkcheck" + engineResult.campaignId + "=" + engineResult.clickId + "_" + engineResult.publisherId + "; expires=" + date.toGMTString() + "; path=/";
+                    if(engineResult.url !== 'undefined' || engineResult.url !== '') {return window.location = engineResult.url}   
+                }
+            };
+      </script>
+<script type="text/javascript" id="">window._bopiq=window._bopiq||[];window._bopiq.push(["setVisitId","\/abbaa22c5d4a4123f328ccf060b9dfc5a\/"]);(function(){function b(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://static.bouncepilot.com/29a38865-21e1-485f-8a85-c343bbbe30fb.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)}"loading"!==document.readyState?b():document.addEventListener("DOMContentLoaded",b)})();</script><script type="text/javascript" id="" src="https://static.traversedlp.com/v1/retargeting.js"></script></body></html>

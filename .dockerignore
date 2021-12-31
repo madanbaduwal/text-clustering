@@ -1,0 +1,25 @@
+# ignore .git and .cache folders
+.git
+.cache
+
+# ignore all markdown files
+*.md
+
+*.log
+
+__pycache__/*
+*/__pycache__/*
+*.py[cod]
+logs/*
+bin/*
+resources/*
+
+.idea/*
+
+# send_message_test_ques.py
+# send_message_test.py
+# test.py
+
+.venv/
+.vscode/*
+Dockerfile

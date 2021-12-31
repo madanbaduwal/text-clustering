@@ -1,0 +1,132 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+  var homesupport_en_sp_names = ['homesupport.irobot.com/resource']
+  var homesupport_en_ca_sp_names = ['support.irobot.ca/resource']
+  var homesupport_en_uk_sp_names = ['support.irobot.co.uk/resource']
+  var homesupport_es_sp_names = ['asistencia.irobot.es/resource']
+  var homesupport_fr_sp_names = ['assistance.irobot.fr/resource']
+  var homesupport_fr_ca_sp_names = ['soutien.irobot.ca/resource']
+  var homesupport_nl_sp_names = ['ondersteuning.irobot.nl/resource']
+  var homesupport_pt_sp_names = ['suporte.irobot.pt/resource']
+  var homesupport_de_sp_names = ['support.irobot.de/resource']
+
+  const queryString = window.location.search;
+  console.log(queryString);
+  const urlParams = new URLSearchParams(queryString);
+  const spName = urlParams.get('spName')
+
+  var default_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://${spName}/login",
+                logoutURL: "https://${spName}/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_en_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=en",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_en_ca_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=en-ca",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_en_uk_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=en-uk",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_es_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=es",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_fr_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=fr",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_fr_ca_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=fr-ca",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_nl_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=nl",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  var homesupport_pt_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=pt",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+    var homesupport_de_script_tag = `
+      %3Cscript src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=de",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            %3C/script%3E
+  `
+
+  if (homesupport_en_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_en_script_tag))
+  } else if (homesupport_en_ca_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_en_ca_script_tag))
+  } else if (homesupport_en_uk_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_en_uk_script_tag))
+  } else if (homesupport_es_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_es_script_tag))
+  } else if (homesupport_fr_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_fr_script_tag))
+  } else if (homesupport_fr_ca_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_fr_ca_script_tag))
+  } else if (homesupport_nl_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_nl_script_tag))
+  } else if (homesupport_pt_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_pt_script_tag))
+  } else if (homesupport_de_sp_names.includes(spName)) {
+    document.write(unescape(homesupport_de_script_tag))
+  }
+  else {
+    document.write(unescape(default_script_tag))
+  }
+</script>
+      <script src="https://cdns.gigya.com/js/gigya.saml.js?apiKey=3_rWtvxmUKwgOzu3AUPTMLnM46lj-LxURGflmu5PcE_sGptTbD-wMeshVbLvYpq01K"> {
+                loginURL:"https://homesupport.irobot.com/resource/login?lang=fr",
+                logoutURL: "https://homesupport.irobot.com/resource/logout"
+            }
+            </script></body></html>

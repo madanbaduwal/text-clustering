@@ -1,0 +1,86 @@
+<html><head id="ext-gen1001">
+		<title>Home</title>
+
+		
+			<link rel="stylesheet" type="text/css" href="combinecssfront/mobile/sencha-touch-1.0.1a/resources/css/sencha-touch.css">
+		
+
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/css/reset-min.css">
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/css/global.css">
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/css/fonts.cfm">
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/designs/getDesign.cfm?id_designs=7462">
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/css/getWebStyles.cfm?id_websites=10795">
+
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/mobile/css/handheld.css?a=1">
+
+		<link rel="stylesheet" type="text/css" href="https://mobile.covedentalcare.com/designs/getDesignMobile.cfm?id_designs=7462">
+
+		<style type="text/css">
+			.x-form .x-panel-body {
+				background-color: transparent;
+			}
+
+			.x-form-fieldset.label .x-panel-body {
+				border : none;
+			}
+		</style>
+
+		
+
+		
+
+		<script type="text/javascript">
+
+			WebKitPoint = function(x,y) { };
+			window.webkitConvertPointFromNodeToPage = function(dom, unusedWebKitPoint) {
+			    var rect = dom.getBoundingClientRect();
+			    return {
+			      'x': rect.left,
+			      'y': rect.top
+			    }
+			};
+
+		</script>
+
+
+		<script type="text/javascript" src="combinejsfront/mobile\sencha-touch-1.0.1a\sencha-touch.js"></script>
+		<script type="text/javascript" src="combinejsfront/mobile\js.files"></script>
+		<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+
+		<script type="text/javascript">
+			var serviceURL = 'mobile/services/services.cfm';
+
+			if(typeof console == "undefined")
+				console = {log:function(){}}
+
+
+
+
+			Ext.setup({
+				onReady : function(){
+					var application = new Mobile.Baystone2({
+						websiteId : 10795,
+						titleText : 'Home',
+						headerImage : '',
+						menu : '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<menu><Page id_pages=\"759260\" isEnabled=\"1\" isHomepage=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"welcome1\" pagetitle=\"Welcome \" pagetype=\"regular\"/><Page id_pages=\"756137\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"about-us\" pagetitle=\"About Dr. Getz\" pagetype=\"regular\"/><Page id_pages=\"756139\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"our-services\" pagetitle=\"Our Services\" pagetype=\"regular\"><Page id_pages=\"756186\" isEnabled=\"1\" isRegularPage=\"2\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"implants\" pagetitle=\"Implants\" pagetype=\"menuitem\"><Page id_pages=\"756147\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"dental-implants\" pagetitle=\"Dental Implants\" pagetype=\"regular\"/></Page><Page id_pages=\"860806\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"invisalign1\" pagetitle=\"Invisalign\" pagetype=\"regular\"/><Page id_pages=\"758608\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"botox-juvederm\" pagetitle=\"Botox/Juvederm\" pagetype=\"regular\"/><Page id_pages=\"758622\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"intravenous-sedation\" pagetitle=\"Intravenous Sedation\" pagetype=\"regular\"/><Page id_pages=\"858719\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"galileos\" pagetitle=\"3D Cone Beam Radiography\" pagetype=\"regular\"/><Page id_pages=\"756168\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"bonding-and-white-fillings\" pagetitle=\"Bonding and White Fillings\" pagetype=\"regular\"/><Page id_pages=\"756140\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"bridges\" pagetitle=\"Bridges\" pagetype=\"regular\"/><Page id_pages=\"756141\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"crowns\" pagetitle=\"Crowns\" pagetype=\"regular\"/><Page id_pages=\"756148\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"dentures\" pagetitle=\"Dentures\" pagetype=\"regular\"/><Page id_pages=\"756149\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"extractions\" pagetitle=\"Extractions\" pagetype=\"regular\"/><Page id_pages=\"756142\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"dental-hygiene-and-periodontal-health\" pagetitle=\"Dental Hygiene and Periodontal Health\" pagetype=\"regular\"/><Page id_pages=\"756207\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"extraction-site-preservation\" pagetitle=\"Extraction Site Preservation\" pagetype=\"regular\"/><Page id_pages=\"756171\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"tmj\" pagetitle=\"TMJ\" pagetype=\"regular\"/><Page id_pages=\"756202\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"night-guards\" pagetitle=\"Night Guards\" pagetype=\"regular\"/><Page id_pages=\"756234\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"protective-mouth-guards\" pagetitle=\"Protective Mouth Guards\" pagetype=\"regular\"/><Page id_pages=\"756160\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" pagename=\"post-op-instructions\" pagetitle=\"Post-Op Instructions\" pagetype=\"regular\"/></Page><Page id_pages=\"758452\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"patient-forms\" pagetitle=\"Patient Forms\" pagetype=\"menuitem\" pdf_filename=\"Medical_History_Page_2.pdf\"><Page id_pages=\"759922\" isEnabled=\"1\" isRegularPage=\"3\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"hipaa-form\" pagetitle=\"HIPAA Form\" pagetype=\"pdf\" pdf_filename=\"Dr_Getz_Hippa_Form.pdf\"/><Page id_pages=\"1532003\" isEnabled=\"1\" isRegularPage=\"3\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"medical-history\" pagetitle=\"Medical History\" pagetype=\"pdf\" pdf_filename=\"Cove_Dental_Care_Medical_History.pdf\"/><Page id_pages=\"1529719\" isEnabled=\"1\" isRegularPage=\"3\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"new\" pagetitle=\"New Patient Forms\" pagetype=\"pdf\" pdf_filename=\"Cove_Dental_Care_New_Patient_Forms.pdf\"/></Page><Page id_pages=\"756243\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"testimonials\" pagetitle=\"Testimonials\" pagetype=\"regular\"/><Page id_pages=\"759261\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"patient-education\" pagetitle=\"Patient Education\" pagetype=\"regular\"><Page id_pages=\"756167\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"q---a\" pagetitle=\"Q &amp; A\" pagetype=\"regular\"/><Page id_pages=\"756166\" isEnabled=\"1\" isRegularPage=\"1\" isRestricted=\"0\" isSection=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"links\" pagetitle=\"Links\" pagetype=\"regular\"/></Page><Page id_pages=\"788387\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"payment-options\" pagetitle=\"Payment Options\" pagetype=\"regular\"><Page externalURL=\"https://www.lendingclub.com/patientsolutions/app/check-your-rate?clientid=206190\" id_pages=\"1139487\" isEnabled=\"1\" isRegularPage=\"5\" isRestricted=\"0\" isSection=\"0\" linktarget=\"1\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"new11\" pagetitle=\"Lending Club\" pagetype=\"externalurl\"/><Page externalURL=\"https://www.carecredit.com/\" id_pages=\"1529720\" isEnabled=\"1\" isRegularPage=\"5\" isRestricted=\"0\" isSection=\"0\" linktarget=\"1\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"carecredit\" pagetitle=\"Care Credit\" pagetype=\"externalurl\"/></Page><Page id_pages=\"756136\" isEnabled=\"1\" isRestricted=\"0\" pagename=\"home\" pagetitle=\"Sedation Dentistry\" pagetype=\"regular\"/><Page id_pages=\"808239\" isEnabled=\"1\" isRestricted=\"0\" menuItemBgColor=\"\" menuItemTextColor=\"\" pagename=\"free-whitening-for-life\" pagetitle=\"Free Whitening for Life\" pagetype=\"regular\"/><Page id_pages=\"836456\" isEnabled=\"1\" isRestricted=\"0\" pagename=\"contact-us11\" pagetitle=\"Contact Us\" pagetype=\"regular\"/></menu>',
+						mobileHeader: 'https://www.baystonemedia.com/images/source/54688.jpg',
+						mobileContentArea : '',
+						footerText : 'Panama City Dentist. Dr. Michelle Getz provides Family Dentist, Emergency Dentist, Botox, Dental Implants, Female Dentist, Root Canal, Wisdom Tooth Extraction to the following locations: Panama City Beach, Lynn Haven, Parker.  Panama City Beach Dentist providing excellent dentistry including Family Dentist, Emergency Dentist, Botox, Dental Implants, Female Dentist, Root Canal, Wisdom Tooth Extraction in Panama City, Panama City Beach, Lynn Haven, Parker, Florida.',
+						callNumber : '850-769-1710',
+						callPrefix : '+1-',
+						doctorName : 'Michelle Getz',
+						switchToRegular : 1,
+						regularAddress : 'http://www.covedentalcare.com/',
+						facebookURL : 'https://www.facebook.com/CoveDentalCarePanamaCity',
+						twitterURL : '',
+						fulladdress : 'https://maps.google.com/maps?daddr=406 N. Cove Blvd  Panama City, FL 32401&amp;hl=en&amp;z=16'
+					});
+    			}
+			})
+		</script><meta id="ext-gen1002" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0;">
+	</head>
+	<body>
+	
+
+
+</body></html>

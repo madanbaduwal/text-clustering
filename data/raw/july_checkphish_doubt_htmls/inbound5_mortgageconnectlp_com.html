@@ -1,0 +1,81 @@
+<html id="webmailWrap" data-ng-app="webmailApp" data-ng-controller="WebmailMainController" style="" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <base href="/4bd67fc8ed02abf8a645695ea6e1d337/m/webmail/">
+    <title data-ng-bind="uiMainState.pageTitle" class="ng-binding"></title>
+
+    <link rel="stylesheet" href="../shared/styles/fml-webmail-dependencies.css">
+    <link rel="stylesheet" href="styles/fml-webmail.css">
+
+    <link rel="stylesheet" data-ng-href="../shared/styles/f-user-theme-.css" href="../shared/styles/f-user-theme-.css">
+
+    <script src="../shared/scripts/fml-webmail-dependencies.js"></script>
+    <script src="../../dependencies/fitty.min.js"></script>
+
+    <script src="scripts/fml-webmail.js"></script>
+    <script>
+        function loadFullMessage()
+        {
+            angular.element(document.getElementById('WMMessagesControllerWrap')).scope().loadFullMessage();
+        }
+    </script>
+
+</head>
+
+<body data-ng-style="uiMainState.isMobileNavMenuExpanded &amp;&amp; {'overflow': 'hidden'}" data-ng-keydown="onBodyKeydown($event)">
+    <!--define SimpleAngularDialog.html inline so that it is available even offline-->
+    <script type="text/ng-template" id="SimpleAngularDialog.html">
+        <div class="modal-header {{headerClass}}">
+            <div class="modal-title f-modal-title">{{title}}</div>
+        </div>
+        <div fd-modal-body minheight="60px" style="padding: 10px 25px;">
+            <div class="f-modal-message">{{message}}</div>
+        </div>
+        <div class="modal-footer">
+            <div data-ng-if="isConfirmation">
+                <button class="btn {{confirmButtonClass}}" data-ng-click="okClicked()">{{okButtonLabel}}</button>
+                <button class="btn btn-default" data-ng-click="cancelClicked()">{{cancelButtonLabel}}</button>
+            </div>
+            <div data-ng-if="!isConfirmation">
+                <button class="btn btn-default" data-ng-click="okClicked()">{{okButtonLabel}}</button>
+            </div>
+        </div>
+    </script>
+    <!--define AngularErrorDialog.html inline so that it is available even offline-->
+    <script type="text/ng-template" id="AngularErrorDialog.html">
+        <div class="modal-header f-error-modal-header">
+                <div class="modal-title f-modal-title">{{title}}</div>
+        </div>
+        <div fd-modal-body minheight="60px" style="padding: 10px 25px;">
+            <div class="f-modal-message">{{message}}</div>
+            <div data-ng-if="ui_data.hasDetails">
+                <span class="fActionLink" data-ng-click="onToggleDetails()">
+                    <i class="fa fa-toggle-right fa-lg" data-ng-show="!ui_data.showDetails"></i>
+                    <i class="fa fa-toggle-down fa-lg" data-ng-show="ui_data.showDetails"></i>
+                    &nbsp;{{details_label}}
+                </span>
+            </div>
+            <div data-ng-if="ui_data.hasDetails" data-ng-show="ui_data.showDetails">
+                <div class="f-modal-message" style="margin-left: 10px; font-size: 14px">{{details}}</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div>
+                <button class="btn btn-default" data-ng-click="okClicked()">{{okButtonLabel}}</button>
+            </div>
+        </div>
+    </script>
+
+    <!-- ngIf: !loadingIsDone --><div data-ng-if="!loadingIsDone" class="fLoadingSpinner ng-scope" style="padding-top: 50px;">
+        <i class="fa fa-spinner fa-spin fa-3x" data-ng-class="uiMainState.isMobile? 'fa-2x' : 'fa-3x'"></i>
+    </div><!-- end ngIf: !loadingIsDone -->
+
+    <!-- ngIf: loadingIsDone -->
+
+    <iframe id="__fPrintFrame" style="width:0;height:0;border:0"></iframe>
+
+
+
+</body></html>

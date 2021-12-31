@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "sse_v2"
+version = "0.1.0"
+description = ""
+authors = ["Madan Baduwal <madanbaduwal100@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "1.1.5"
+numpy = "1.20.1"
+joblib = "1.0.1"
+streamlit = "0.79.0"
+scikit-learn = "0.22.2.post1"
+sklearn = "0.0"
+loguru = "^0.5.3"
+pre-commit = "^2.11.1"
+dynaconf = "^3.1.4"
+Flask = "^1.1.2"
+matplotlib = "^3.4.1"
+fastapi = "^0.63.0"
+unicorn = {extras = ["standard"], version = "^1.0.2"}
+uvloop = "^0.15.2"
+uvicorn = {extras = ["accelerated"], version = "^0.13.4"}
+gunicorn = "^20.1.0"
+pytest = "^6.2.3"
+fire = "^0.4.0"
+pymongo = "^3.11.4"
+autopep8 = "^1.5.7"
+ez_setup = "^0.9"
+typer = "^0.3.2"
+tqdm = "^4.62.1"
+mlflow = "^1.19.0"
+botocore = "^1.21.23"
+
+[tool.poetry.dev-dependencies]
+tox = "^3.23.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+student-status = "interfaces.command-line.pyprojectcli:main" 
+
+
+
+
+# Use 
+
+# Make package in local
+## poetry install # install package in local
+## student-status --help
+## student-status add 2 2
+
+# Upload package to PYPI
+## poetry config pypi-token.pypi $POETRY_PYPI_TOKEN_PYPI
+## poetry publish --build
+
+
+# Poetry to requirements.txt
+## poetry export --without-hashes -o requirements.txt

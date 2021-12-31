@@ -1,0 +1,3 @@
+
+# Ignore dynaconf secret files
+# .secrets.* , maile afno directory ma rakhna lai comment gareko public ma garda ignore garni

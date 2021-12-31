@@ -1,0 +1,106 @@
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
+
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+            body, p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+        }
+    </style>
+    <script>
+        var tags = {
+            'cm': {
+                'fr': 'https://er.cloud-media.fr/r/3ecbe40eebd5ee10576d55b3120ffca3/20305b1d-4a14-4990-b6a1-7765863e4041',
+                'br': 'https://er.cloud-media-br.com/r/3ecbe40eebd5ee10576d55b3120ffca3/da4d6b2a-c713-4bb5-910f-b67714d40d1f',
+                'es': 'https://er.cloud-media.es/r/3ecbe40eebd5ee10576d55b3120ffca3/c5490be1-9ed4-4335-a0d0-587044edfa3b'
+            },
+            'amg': {
+                'fr': 'https://r.phywi.org/cl.gif?m=3ecbe40eebd5ee10576d55b3120ffca3',
+                'br': 'https://r.phywi.org/cl.gif?m=3ecbe40eebd5ee10576d55b3120ffca3',
+                'es': 'https://r.phywi.org/cl.gif?m=3ecbe40eebd5ee10576d55b3120ffca3',
+                'it': 'https://r.phywi.org/cl.gif?m=3ecbe40eebd5ee10576d55b3120ffca3'
+            },
+            'webo': {
+                'fr': 'https://redirect.frontend.weborama.fr/redirect/standard?url=https%3A%2F%2Fr.phywi.org%2Fwebo.gif%3Fmd%3D3ecbe40eebd5ee10576d55b3120ffca3%26wb%3D{WEBO_CID}',
+                'it': 'https://redirect.frontend.weborama.fr/redirect/standard?url=https%3A%2F%2Fr.phywi.org%2Fwebo.gif%3Fmd%3D3ecbe40eebd5ee10576d55b3120ffca3%26wb%3D{WEBO_CID}'
+            },
+        };
+
+        var url = decodeURIComponent('https%3A%2F%2Fa.pwspace.com%2Fndc%2F4LLZP426%3Fps_ee%3D3ecbe40eebd5ee10576d55b3120ffca3%26ps_g%3DM%26ps_a%3D1956%26z%3D1%26mv%3D1');
+
+        var md5 = '3ecbe40eebd5ee10576d55b3120ffca3';
+        var country = 'fr';
+        var providers = ['amg', 'cm', 'webo'];
+        var loaded = [];
+
+        function get_tag(provider) {
+            var tag = '';
+            if (tags[provider] && tags[provider][country]) {
+                tag = tags[provider][country].replace("EMAIL_MD5", md5);
+            }
+
+            return tag;
+        }
+
+        function redirect() {
+            if (loaded.length === providers.length) {
+                window.location.href = url;
+            }
+        }
+
+        setTimeout(function () {
+            window.location.href = url;
+        }, 1000);
+    </script>
+    <link rel="prefetch" href="https%3A%2F%2Fa.pwspace.com%2Fndc%2F4LLZP426%3Fps_ee%3D3ecbe40eebd5ee10576d55b3120ffca3%26ps_g%3DM%26ps_a%3D1956%26z%3D1%26mv%3D1">
+    <meta http-equiv="refresh" content="2; url=https%3A%2F%2Fa.pwspace.com%2Fndc%2F4LLZP426%3Fps_ee%3D3ecbe40eebd5ee10576d55b3120ffca3%26ps_g%3DM%26ps_a%3D1956%26z%3D1%26mv%3D1">
+</head>
+
+<body>
+<script>
+    for (var i in providers) {
+        provider = providers[i];
+        tag = get_tag(provider);
+        document.write('<img src="' + tag + '" onload="loaded.push(\'' + provider + '\'); redirect();" style="width:1px;height:1px;border:none;"/>');
+    }
+</script><img src="https://r.phywi.org/cl.gif?m=3ecbe40eebd5ee10576d55b3120ffca3" onload="loaded.push('amg'); redirect();" style="width:1px;height:1px;border:none;"><img src="https://er.cloud-media.fr/r/3ecbe40eebd5ee10576d55b3120ffca3/20305b1d-4a14-4990-b6a1-7765863e4041" onload="loaded.push('cm'); redirect();" style="width:1px;height:1px;border:none;"><img src="https://redirect.frontend.weborama.fr/redirect/standard?url=https%3A%2F%2Fr.phywi.org%2Fwebo.gif%3Fmd%3D3ecbe40eebd5ee10576d55b3120ffca3%26wb%3D{WEBO_CID}" onload="loaded.push('webo'); redirect();" style="width:1px;height:1px;border:none;">
+
+
+</body></html>

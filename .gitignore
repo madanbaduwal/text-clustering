@@ -1,0 +1,141 @@
+# git status # terminal ma herni akchoti k vairaxa vanyara
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+environmentname/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+#htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+# nosetests.xml
+# coverage.xml
+*.cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+# docs/_build/ (but we want to publish our documentation in git so we can comment this)
+
+# # PyBuilder
+# target/
+
+# DotEnv configuration
+.env
+
+# Database
+*.db
+*.rdb
+
+# # Pycharm
+# .idea
+
+# # VS Code
+# .vscode/
+
+# # Spyder
+# .spyproject/
+
+# # Jupyter NB Checkpoints
+# .ipynb_checkpoints/
+
+# # exclude data from source control by default
+# /data/
+
+# # Mac OS-specific storage files
+# .DS_Store
+
+# # vim
+# *.swp
+# *.swo
+
+# # Mypy cache
+# .mypy_cache/
+
+
+
+# # Literal File Names
+# secet.txt # yo file lai ignore garxa
+# Documentation/foo.html
+# Documentation/gitignore.html
+# file.o
+# lib.a
+# src/internal.o
+
+
+# # Directories
+# node_modules/  # yo folder bhitra ko lai nai ignore garxa tyo  bhitra file ,folder j vayani ignore garxas
+logs/
+# node_modules # yati grayasi yo directory ma vako yo name ko folder and yo name ko file lai ignore garxa
+
+
+# # Wildcard
+# *.log
+# index.html~  # Another example is *~, which matches any file ending with ~, such as index.html~
+
+
+
+
+
+# #Negation (mathi ignore gareko file haru aba ignore nagranu vanyara vannu)
+# #You can use a prefix of ! to negate a file that would be ignored.
+
+# *.log
+# !example.log
+
+# # In this example, example.log is not ignored, even though all other files ending with .log are ignored.
+
+# # NOte : But be aware, you can't negate a file inside of an ignored directory:
+# logs/  # (yo directory lai nai ignore garyaxa vanya chai)
+# !logs/example.log # ( directory lai nai ignore garya x vanya chai tyo bhitra ko kuralai ignore nagar vanna mildaina)
+
+
+# # Double Asterisk
+
+# # ** can be used to match any number of directories.
+# **/logs # **/logs matches all files or directories named logs (same as the pattern logs) in this repository
+
+
+# # Comments
+# # comment
+
+mlruns/
+venv/

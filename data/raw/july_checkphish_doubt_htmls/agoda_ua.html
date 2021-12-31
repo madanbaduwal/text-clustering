@@ -1,0 +1,571 @@
+<html lang="en" class="theme-agoda" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#  place: http://ogp.me/ns/place#" style="--vh:6px; --evil-window-height-miss:0px;"><head>
+
+<script>
+    try {
+    !function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{var n=t();for(var r in n)("object"==typeof exports?exports:e)[r]=n[r]}}(window,(function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var i=t[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(r,i,function(t){return e[t]}.bind(null,i));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=35)}({35:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),n(36)},36:function(e,t){var n,r,i,o,u,f,c,a,l,p,s,d;u={passive:!0,capture:!0},f=new Date,c=function(){o=[],r=-1,n=null,s(addEventListener)},a=function(e,t){n||(n=t,r=e,i=new Date,s(removeEventListener),l())},l=function(){if(r>=0&&r<i-f){var e={entryType:"first-input",name:n.type,target:n.target,cancelable:n.cancelable,startTime:n.timeStamp,processingStart:n.timeStamp+r};o.forEach((function(t){t(e)})),o =[]}},p =function(e){if(e.cancelable){var t=(e.timeStamp>
+        1e12?new Date:performance.now())-e.timeStamp;"pointerdown"==e.type?function(e,t){var n=function(){a(e,t),i()},r=function(){i()},i=function(){removeEventListener("pointerup",n,u),removeEventListener("pointercancel",r,u)};addEventListener("pointerup",n,u),addEventListener("pointercancel",r,u)}(t,e):a(t,e)}},s=function(e){["mousedown","keydown","touchstart","pointerdown"].forEach((function(t){return e(t,p,u)}))},d="hidden"===document.visibilityState?0:1/0,addEventListener("visibilitychange",(function e(t){"hidden"===document.visibilityState&&(d=t.timeStamp,removeEventListener("visibilitychange",e,!0))}),!0),c(),self.webVitals={firstInputPolyfill:function(e){o.push(e),l()},resetFirstInputPolyfill:c,get firstHiddenTime(){return d}}}})}));
+    } catch(e) {
+        window.webVitalsPolyfillDebugInfo = e;
+    }
+</script>
+    
+<script>
+</script>
+
+
+    <script type="text/javascript">
+        // FIR initialization
+        window && window.performance && window.performance.mark && window.performance.mark('FirstImportantRendering-start');
+        // TODO: remove inline TTI polyfill and rely on PerformanceClient
+        // TTI initialization
+        // ref: https://github.com/GoogleChromeLabs/tti-polyfill
+        !function () {
+            if (window && window.PerformanceLongTaskTiming && window.PerformanceObserver) {
+                var g = window.__tti = { e: [] };
+                g.o = new PerformanceObserver(function (l) {
+                    g.e = g.e.concat(l.getEntries())
+                });
+                if (g.o && g.o.observe) {
+                    g.o.observe({ entryTypes: ['longtask'] })
+                }
+            }
+        }();
+    </script>
+
+<script type="text/javascript" id="messagingClientLite">
+!function(n,t){var i,r;if("object"==typeof exports&&"object"==typeof module)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{i=t();for(r in i)("object"==typeof exports?exports:n)[r]=i[r]}}("undefined"!=typeof self?self:this,function(){return function(n){function t(r){if(i[r])return i[r].exports;var u=i[r]={i:r,l:!1,exports:{}};return n[r].call(u.exports,u,u.exports,t),u.l=!0,u.exports}var i={};return t.m=n,t.c=i,t.d=function(n,i,r){t.o(n,i)||Object.defineProperty(n,i,{enumerable:!0,get:r})},t.r=function(n){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(n,Symbol.toStringTag,{value:"Module"});Object.defineProperty(n,"__esModule",{value:!0})},t.t=function(n,i){var r,u;if((1&i&&(n=t(n)),8&i)||4&i&&"object"==typeof n&&n&&n.__esModule)return n;if(r=Object.create(null),t.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:n}),2&i&&"string"!=typeof n)for(u in n)t.d(r,u,function(t){return n[t]}.bind(null,u));return r},t.n=function(n){var i=n&&n.__esModule?function(){return n.default}:function(){return n};return t.d(i,"a",i),i},t.o=function(n,t){return Object.prototype.hasOwnProperty.call(n,t)},t.p="",t(t.s=163)}({1:function(n,t,i){"use strict";(function(n){i.d(t,"a",function(){return r});var r=function(){function t(){}return t.current=function(){var t="undefined"!=typeof window?window:"undefined"!=typeof self?self:void 0!==n?n:null;if(!t)throw new Error("Unsupported environment.");return t},t}()}).call(this,i(20))},12:function(n,t,i){"use strict";function r(n,t,i){for(var r,f,e=i.length,u=0;u<e;u++)if(r=i[u],r)for(f in r)r.hasOwnProperty(f)&&n(f,r[f])}i.d(t,"a",function(){return r})},163:function(n,t,i){"use strict";i.r(t);i.d(t,"MessagingClient",function(){return r});var u=i(1),f=i(31),e=i(19),o=function(){function n(){this.buffer={items:[]};this.contextData={}}return n.prototype.send=function(t){var r=this.buffer.items,i=n.MaxBufferSize-r.length;i>0&&(t instanceof Array?(i<t.length&&(t=t.slice(0,i)),this.buffer.items=t.concat(r)):this.buffer.items.push(t))},n.prototype.dispose=function(n){this.buffer.items.length=0;n&&n()},n.prototype.environment=function(){},n.prototype.context=function(n){var t=this.contextData;t.sessionId=n.sessionId||t.sessionId;t.userId=n.userId||t.userId},n.MaxBufferSize=15e3,n}(),s=i(40),r=function(){function n(n){this._test=n}return n.create=function(t){return n.instantiate(t)},n.instantiate=function(t){return(new n).instantiate(t)},n.environment=function(t){return new n(t)},n.prototype.instantiate=function(n){var t=e.a.get(),i,r;return(t.environment=t.environment||n,t.test=t.test||this._test,t.messagingClient)?t.messagingClient:(i=new o,r=new s.a(i,new f.a),t.buffer=i.buffer,t.context=i.contextData,t.messagingClient=r,r)},n}();u.a.current().MessagingClient=r},19:function(n,t,i){"use strict";i.d(t,"a",function(){return f});var u=i(1),r="MessagingClient-LiteData",f=function(){function n(){}return n.get=function(){var n=u.a.current();return n[r]||(n[r]={})},n.clear=function(){delete u.a.current()[r]},n}()},20:function(n){var t=function(){return this}();try{t=t||new Function("return this")()}catch(n){"object"==typeof window&&(t=window)}n.exports=t},24:function(n,t,i){"use strict";i.d(t,"a",function(){return r});var r=function(){function n(){}return n.current=function(){return window&&window.__MCJS_EXTENSION_DATA__||{}},n}()},31:function(n,t,i){"use strict";i.d(t,"a",function(){return r});var r=function(){function n(){}return n.prototype.now=function(){return+new Date},n}()},40:function(n,t,i){"use strict";i.d(t,"a",function(){return f});var r=i(24),u=i(12),f=function(){function n(n,t){this.sender=n;this._time=t}return n.prototype.create=function(n,t,i){var r=Number(null==i?void 0:i.timestamp),f;return("number"!=typeof r||isNaN(r)||r<1e5)&&(r=this._time.now()),f={_meta:{timestamp:r,type:n}},t&&function(n){for(var i=[],t=1;t<arguments.length;t++)i[t-1]=arguments[t];n||(n={});Object(u.a)(function(t,i){void 0===n[t]&&(n[t]=i)},n,i)}(f,t),f},n.prototype.send=function(n,t){var i,u;if(!n||!n._meta)throw new Error("Message or message type is undefined");null!==(i=(u=(n=JSON.parse(JSON.stringify(n)))._meta).timestamp)&&void 0!==i||(u.timestamp=this._time.now());n._meta.tabId=r.a.current().tabId;this.sender.send(n,t)},n.prototype.debug=function(n,t){this.sender.environment({debug:n,logs:t})},n.prototype.context=function(n){this.sender.context(n)},n}()}})})
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="agoda:siteid" content="mspa">
+    <link rel="SHORTCUT ICON" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+            <style type="text/css">
+            .theme-agoda .loader>span:nth-child(1){background-color:#ff2938}.theme-agoda .loader>span:nth-child(2){background-color:#fdb812}.theme-agoda .loader>span:nth-child(3){background-color:#00b057}.theme-agoda .loader>span:nth-child(4){background-color:#af38b1}.theme-agoda .loader>span:nth-child(5){background-color:#00aae0}
+        </style>
+
+
+
+
+    <style>
+        #agoda-spa {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAABh0lEQVR42u3TQREAAAQAMPrndedHAQnc1mHZVRPAKQUBQUAQEAQEAUFAEBAEBAFBAEFAEBAEBAFBQBAQBAQBQUAQQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEAQQBAQBQUAQEAQEAUFAEBAEEAQEAUFAEBAEBAFBQBAQBAQBBAFBQBAQBAQBQUAQEAQEAQQBQUAQEAQEAUFAEBAEBAFBAEFAEBAEBAFBQBAQBAQBQUAQQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEEQQEAQEAUFAEBAEBAFBQBAQBBAEBAFBQBAQBAQBQUAQEAQEAQQBQUAQEAQEAUFAEBAEBAEEAUFAEBAEBAFBQBAQBAQBQQBBQBAQBAQBQUAQEAQEAUEAQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEEQQEAQEAUFAEBAEBAFBQBAQBBAEBAFBQBAQBAQBQUAQEAQEEQQEAUFAEBAEBAFBQBD4aAHC1Ai+2hrMBAAAAABJRU5ErkJggg==);
+            background-size: cover;
+        }
+    </style>
+
+    <style>
+        html,
+        body,
+        #agoda-spa {
+            display: flex;
+            display: -webkit-flex;
+            flex: 1;
+            -webkit-flex: 1;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+        }
+
+                
+                    #agoda-spa.backgroundFromServer {
+                        background-image: url('https://cdn6.agoda.net/images/mobile/FUSIONFE-160/bg_mspa.jpg');
+                        background-position-x: 0;
+                        background-position-y: 0;
+                        background-size: 100% 100%;
+                    }
+                
+
+            
+                .backgroundSpace {
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   overflow: hidden;
+                   width: 100vw;
+                   height: 100%;
+               }
+                .backgroundContainer {
+                   width: 50vw;
+                   height: 50vh;
+                }
+            
+
+
+        html {
+            height: 100%;
+        }
+
+        * {
+            touch-action: manipulation;
+        }
+
+        #agoda-splash {
+            display: flex;
+            display: -webkit-flex;
+            flex: 1;
+            -webkit-flex: 1;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+            justify-content: center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -webkit-align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: opacity 0.4s ease-out;
+            transition-delay: 0.2s;
+            z-index: 100;
+        }
+
+        #agoda-splash .agodaSplashPanel {
+            background-color: white;
+            padding: 14px 15px;
+            border-radius: 8px;
+        }
+
+        #agoda-splash.hide {
+            opacity: 0;
+        }
+
+        #agoda-splash.display-none {
+            display: none;
+        }
+
+        .loader {
+            display: flex;
+            display: -webkit-flex;
+            margin-top: 3px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .loader span {
+            width: 16px;
+            height: 16px;
+            margin: 0 4px;
+            opacity: 0;
+            border-radius: 50%;
+            -webkit-animation: loaderFade 1s infinite;
+            -moz-animation: loaderFade 1s infinite;
+            -o-animation: loaderFade 1s infinite;
+            -ms-animation: loaderFade 1s infinite;
+            animation: loaderFade 1s infinite;
+        }
+
+        .loader > span:nth-child(1) {
+            background-color: #e44746;
+            -webkit-animation-delay: -0.5s;
+            -moz-animation-delay: -0.5s;
+            -o-animation-delay: -0.5s;
+            -ms-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+
+        .loader > span:nth-child(2) {
+            background-color: #ffa726;
+            -webkit-animation-delay: -0.4s;
+            -moz-animation-delay: -0.4s;
+            -o-animation-delay: -0.4s;
+            -ms-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+
+        .loader > span:nth-child(3) {
+             background-color: #85c150;
+            -webkit-animation-delay: -0.3s;
+            -moz-animation-delay: -0.3s;
+            -o-animation-delay: -0.3s;
+            -ms-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+
+        .loader > span:nth-child(4) {
+            background-color: #8c69ca;
+            -webkit-animation-delay: -0.2s;
+            -moz-animation-delay: -0.2s;
+            -o-animation-delay: -0.2s;
+            -ms-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+
+        .loader > span:nth-child(5) {
+            background-color: #488bf8;
+            -webkit-animation-delay: -0.1s;
+            -moz-animation-delay: -0.1s;
+            -o-animation-delay: -0.1s;
+            -ms-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+
+        .no-touch {
+            touch-action: none;
+            pointer-events: none;
+        }
+
+        @keyframes logoAnim {
+            0%, 100% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .whiteLabelLogo {
+            animation-name: logoAnim;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @-webkit-keyframes loaderFade { 0% { opacity: 1; } 20% { opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; } } @-moz-keyframes loaderFade { 0% { opacity: 1; } 20% { opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; } } @keyframes loaderFade { 0% {opacity: 1;} 20% {opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; }
+        }
+    </style>
+
+
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.feMessagingUrl = '/js/assets/cronos/Assets/mcjs-worker.js';
+        dictatorParams.polyFillFeMessagingUrl = '/js/assets/cronos/Assets/mcjs-polyfills.js';
+        dictatorParams.cid = -1;
+        dictatorParams.aid = 130243;
+        dictatorParams.pageId = 1;
+        dictatorParams.sessionId = "4ebpmiqfkrxu2s3qmwivu4so";
+        dictatorParams.redirectModel = {"overlayBanner":{"messageId":"OverlayBanner","messageViewName":"OverlayBanner","section":null,"priority":0,"isShowPopup":false,"attributes":{"agodaHeaderText":"Agoda – Best deals on hotels and vacation rentals","agodaDetailText":"(70,000+ 5-star reviews)","messageText":"We have even lower prices in our app!","installButton":"See great deals in our app","continueInSiteButton":"Continue to mobile site","openInAppLink":"http://agoda.onelink.me/1640755593?pid=redirect&c=OverlayBanner&af_dp=agoda%3A%2F%2Fhome&adults=2&children=0&rooms=1&checkIn=2021-07-28&checkOut=2021-07-29&site_id=-1&af_siteid=-1&af_sub1=EXP-ID-0&af_sub2=EXP-RUN-ID-0&af_sub3=59ef0e5f-29d1-45ee-9f32-8bad24ae1180&af_force_dp=true&af_click_lookback=1d","isAndroidDeviceType":"true"}},"promoOverlay":null,"whiteBanner":null,"tallBanner":null,"showPulseCarousel":true,"redirectProperties":{"devicePlatform":"PHONE","mobileDeviceType":"ANDROID","browserName":"Chrome","origin":"US","isLogin":"False","trafficType":"User"},"showAppPrices":false};
+        dictatorParams.machineName = "AS-AGWEB-3E08";
+        dictatorParams.cttp = 4;
+        dictatorParams.userId = "59ef0e5f-29d1-45ee-9f32-8bad24ae1180";
+        dictatorParams.mseSearchDetails = [];
+        dictatorParams.isWhiteLabel = true;
+        dictatorParams.searchEngineClicks = {"gclid":""};
+        dictatorParams.isFlightPhaseExperimentActive = false;
+        dictatorParams.isHideFlightsMenu = false;
+        dictatorParams.gwUrl= 'www.agoda.com/api/gw';
+        dictatorParams.gwPciUrl = "gwpci.agoda.com";
+        dictatorParams.webgateUrl = 'www.agoda.com';
+        dictatorParams.mainSiteUrl = 'www.agoda.com';
+        dictatorParams.isCcpaPolicyMenuLink = false;
+        dictatorParams.isLandingHotel = false;
+        dictatorParams.isMultiHotels = true;
+        dictatorParams.isPackagesMSPA = false;
+        dictatorParams.isBfMilestone3 = true;
+        dictatorParams.upgradeTslib = true;
+        dictatorParams.isBundleOptimized = false;
+        dictatorParams.renderBackgroundFromServer = true;
+        dictatorParams.backgroundUrl = "";
+        dictatorParams.enableAccessibilityTheme = true;
+        dictatorParams.isFontTextSearchCalendarOccupancy  = true;
+        dictatorParams.fontSSR = false;
+        dictatorParams.fontRoomGrid = false;
+        dictatorParams.flightFixOnlineBankingCancellationFlow = true;
+        dictatorParams.batchApplicationDataDispatch = false;
+        dictatorParams.isPreloadPropertyMosaic = false;
+        dictatorParams.isAddedGeoContent = false;
+        dictatorParams.isAddedHotelFaq = false;
+        dictatorParams.earlySearchResultCall = false;
+        dictatorParams.asqLosTooltipsMspa = true;
+        dictatorParams.asqLosConfiguration = {"106":[14,15],"132":[7,14,21]};
+        dictatorParams.asqAllowedCities = true;
+        dictatorParams.asqAllowedCitiesConfiguration = {"16056":{"config":{"losConfig":[],"badgeCmsId":130223}}};
+        dictatorParams.isGetRateplanForDatelessHotelPage = false;
+        dictatorParams.iswebVitalsV2Enabled =  true;
+        dictatorParams.isBrazeWhiteLabelSupport = true;
+        dictatorParams.isLoadBrazeLibrarySooner = false;
+        dictatorParams.origin = "US";
+
+
+
+
+
+
+            
+                dictatorParams.geoOriginInfo = {};
+                dictatorParams.geoOriginInfo.originCity = 'Meridian';
+                    
+                        dictatorParams.geoOriginInfo.subDivisionName = 'Idaho';
+                    
+            
+    </script>
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.whiteLabelBrandLogo = "https://cdn6.agoda.net/images/MVC/default/agoda-logo-v2.png";
+        dictatorParams.isMaintenanceMode = false;
+        dictatorParams.isEmergencyMode = false;
+        dictatorParams.isBookingForMaintenanceModeEnabled = false;
+    </script>
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.shouldShowDomesticName = false;
+    </script>
+    
+    <script type="text/javascript">
+        window.prerender = {
+            mandatoryComponentsFeatureEnabled: true,
+            mandatoryComponentsFinishedRendering: function () {
+                return false;
+            },
+        };
+    </script>
+
+        <link href="https://cdn6.agoda.net/js/mspa/theme-agoda.9d9db30069a839513966.css" rel="stylesheet">
+        <link href="https://cdn6.agoda.net/js/mspa/app.da5af154913f5aa7d9cb.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            sessionStorage.setItem('mspaConsulRetry', null);
+        </script>
+</head>
+<body class="theme-agoda OWL-MMB-MOBILE OWL-INTER OWL-714 OWL-748 OWL-808 OWL-810 DEXP-221  ">
+
+        <div class="backgroundSpace" data-lcp="false">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="backgroundContainer"></div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+
+    <div id="agoda-spa" class="backgroundFromServer" data-lcp="false"><div class="SimpleMessage__messageWrapper--aS2iG" data-component="SimpleMessage"><div class="SimpleMessage__message--3cINS SimpleMessage__hide--2yAqi SimpleMessage__base--1vdIa SimpleMessage__padding--qt1WY" message-type="none"></div></div></div>
+
+    <div id="agoda-splash">
+                <div class="agodaSplashPanel">
+                        <svg width="121" height="36" viewBox="0 0 121 36" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="#5f5d5b"><path d="M19.42 17.55c0-3.59-2.723-6.312-6.326-6.312-3.599 0-6.322 2.722-6.322 6.311 0 3.594 2.723 6.311 6.322 6.311 3.603 0 6.326-2.715 6.326-6.31m-15.92 0c0-5.335 4.287-9.36 9.594-9.36 5.307 0 9.594 3.988 9.594 9.322V25.5c0 .943-.65 1.632-1.67 1.632-1.054 0-1.672-.69-1.672-1.632v-1.927h-.217c-1.057 1.85-3.197 3.336-6.289 3.336-5.123 0-9.34-4.025-9.34-9.36M43.124 17.55c0-3.588-2.727-6.31-6.323-6.31-3.6 0-6.329 2.722-6.329 6.31 0 3.593 2.727 6.312 6.33 6.312 3.595 0 6.322-2.72 6.322-6.311M30.909 32.935c-.87-.433-1.274-1.197-.907-2.07.396-.905 1.269-1.233 2.106-.798 1.273.582 2.834.983 4.4.983 4.104 0 6.542-2.392 6.542-6.46v-1.013h-.22c-1.053 1.849-3.198 3.335-6.29 3.335-5.12 0-9.339-4.025-9.339-9.36s4.292-9.36 9.6-9.36c5.302 0 9.594 3.99 9.594 9.324v6.858c0 5.807-3.82 9.8-9.997 9.8-1.923-.004-3.853-.407-5.489-1.24M66.826 17.55c0-3.59-2.724-6.312-6.326-6.312-3.599 0-6.322 2.722-6.322 6.311 0 3.594 2.723 6.311 6.322 6.311 3.6 0 6.326-2.715 6.326-6.31m-15.92 0c0-5.335 4.25-9.36 9.594-9.36 5.307 0 9.594 4.025 9.594 9.36s-4.287 9.36-9.594 9.36c-5.344 0-9.593-4.026-9.593-9.36M90.528 17.55c0-3.59-2.727-6.312-6.322-6.312-3.601 0-6.33 2.722-6.33 6.311 0 3.594 2.727 6.311 6.33 6.311 3.595 0 6.322-2.715 6.322-6.31m-15.921 0c0-5.335 4.22-9.36 9.34-9.36 3.091 0 5.2 1.486 6.288 3.335h.22V2.46c0-.943.651-1.633 1.673-1.633 1.052 0 1.673.69 1.673 1.633v15.127c0 5.334-4.292 9.323-9.594 9.323-5.308 0-9.6-4.025-9.6-9.36M114.227 17.55c0-3.59-2.724-6.312-6.323-6.312s-6.322 2.722-6.322 6.311c0 3.594 2.723 6.311 6.322 6.311s6.323-2.715 6.323-6.31m-15.916 0c0-5.335 4.286-9.36 9.593-9.36s9.594 3.988 9.594 9.322V25.5c0 .943-.65 1.632-1.673 1.632-1.052 0-1.67-.69-1.67-1.632v-1.927h-.216c-1.057 1.85-3.197 3.336-6.289 3.336-5.127 0-9.34-4.025-9.34-9.36"></path></g>
+                        </svg>
+                        <div class="loader">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                </div>
+
+    </div>
+    <div id="baymax-stamp"><!-- Baymax Allo  --></div>
+
+
+
+
+
+    <script type="text/javascript">
+        var _ga = _ga || {};
+        _ga.source = "Direct Access";
+        _ga.medium = "Direct Access";
+    </script> 
+
+
+<script type="text/javascript" id="iePolyFill">
+    !function (e, n) { "object" == typeof exports && "undefined" != typeof module ? n() : "function" == typeof define && define.amd ? define(n) : n() }(0, function () { "use strict"; function e() { } function n(e) { if (!(this instanceof n)) throw new TypeError("Promises must be constructed via new"); if ("function" != typeof e) throw new TypeError("not a function"); this._state = 0, this._handled = !1, this._value = undefined, this._deferreds = [], f(e, this) } function t(e, t) { for (; 3 === e._state;)e = e._value; 0 !== e._state ? (e._handled = !0, n._immediateFn(function () { var n = 1 === e._state ? t.onFulfilled : t.onRejected; if (null !== n) { var i; try { i = n(e._value) } catch (f) { return void r(t.promise, f) } o(t.promise, i) } else (1 === e._state ? o : r)(t.promise, e._value) })) : e._deferreds.push(t) } function o(e, t) { try { if (t === e) throw new TypeError("A promise cannot be resolved with itself."); if (t && ("object" == typeof t || "function" == typeof t)) { var o = t.then; if (t instanceof n) return e._state = 3, e._value = t, void i(e); if ("function" == typeof o) return void f(function (e, n) { return function () { e.apply(n, arguments) } }(o, t), e) } e._state = 1, e._value = t, i(e) } catch (u) { r(e, u) } } function r(e, n) { e._state = 2, e._value = n, i(e) } function i(e) { 2 === e._state && 0 === e._deferreds.length && n._immediateFn(function () { e._handled || n._unhandledRejectionFn(e._value) }); for (var o = 0, r = e._deferreds.length; r > o; o++)t(e, e._deferreds[o]); e._deferreds = null } function f(e, n) { var t = !1; try { e(function (e) { t || (t = !0, o(n, e)) }, function (e) { t || (t = !0, r(n, e)) }) } catch (i) { if (t) return; t = !0, r(n, i) } } var u = function (e) { var n = this.constructor; return this.then(function (t) { return n.resolve(e()).then(function () { return t }) }, function (t) { return n.resolve(e()).then(function () { return n.reject(t) }) }) }, c = setTimeout; n.prototype["catch"] = function (e) { return this.then(null, e) }, n.prototype.then = function (n, o) { var r = new this.constructor(e); return t(this, new function (e, n, t) { this.onFulfilled = "function" == typeof e ? e : null, this.onRejected = "function" == typeof n ? n : null, this.promise = t }(n, o, r)), r }, n.prototype["finally"] = u, n.all = function (e) { return new n(function (n, t) { function o(e, f) { try { if (f && ("object" == typeof f || "function" == typeof f)) { var u = f.then; if ("function" == typeof u) return void u.call(f, function (n) { o(e, n) }, t) } r[e] = f, 0 == --i && n(r) } catch (c) { t(c) } } if (!e || "undefined" == typeof e.length) throw new TypeError("Promise.all accepts an array"); var r = Array.prototype.slice.call(e); if (0 === r.length) return n([]); for (var i = r.length, f = 0; r.length > f; f++)o(f, r[f]) }) }, n.resolve = function (e) { return e && "object" == typeof e && e.constructor === n ? e : new n(function (n) { n(e) }) }, n.reject = function (e) { return new n(function (n, t) { t(e) }) }, n.race = function (e) { return new n(function (n, t) { for (var o = 0, r = e.length; r > o; o++)e[o].then(n, t) }) }, n._immediateFn = "function" == typeof setImmediate && function (e) { setImmediate(e) } || function (e) { c(e, 0) }, n._unhandledRejectionFn = function (e) { void 0 !== console && console && console.warn("Possible Unhandled Promise Rejection:", e) }; var l = function () { if ("undefined" != typeof self) return self; if ("undefined" != typeof window) return window; if ("undefined" != typeof global) return global; throw Error("unable to locate global object") }(); l.Promise ? l.Promise.prototype["finally"] || (l.Promise.prototype["finally"] = u) : l.Promise = n });
+</script>
+
+
+
+<script type="text/javascript">
+        var utag_cfg_ovrd = { noview: true };
+        var rtag_hotelid1 = 0;
+        var rtag_hotelid2 = 0;
+        var rtag_hotelid3 = 0;
+        var rtag_sid = 0;
+        var rtag_is_dev = false;
+        var rtag_is_qa = false;
+        var rtag_is_live = true;
+        var rtag_ue = "";
+        var rtag_ue_sh = "";
+        var rtag_is_real_user = "true";
+
+            
+            var rtag_Session_Based_Attribution_CID = "-1";
+            var rtag_Session_Based_Attribution_Tag = "";
+            var rtag_Session_Based_Attribution_ClickDate = "2021-07-27T09:00:18";
+            var rtag_Session_Based_Attribution_AdditionalData = "{&quot;IsPaid&quot;:False,&quot;gclid&quot;:&quot;&quot;}";
+            var rtag_Session_Based_Attribution_ModelID = "19";
+            
+
+        var rtag_exp_rmkt_1 = "Z";
+        var rtag_exp_rmkt_2 = "Z";
+        var rtag_exp_rmkt_3 = "Z";
+        var rtag_exp_rmkt_4 = "Z";
+        var rtag_exp_rmkt_5 = "Z";
+
+    
+        var rtag_experiments = {
+            money_exp_1: "Z",
+            money_exp_2: "Z",
+            money_exp_3: "Z",
+            money_exp_4: "Z",
+            money_exp_5: "Z"
+        }; 
+    
+                
+        var rtag_cid_userdata = -1;
+        var rtag_tag_userdata = "";
+    
+    window.propertyPageParamsPromise = new Promise(function(resolve) { window.loadTealium = resolve });
+</script>
+
+<script type="text/javascript" id="tealium">
+    var isCCPAEnable = false;
+    var appSettingsPreferences = JSON.parse(localStorage.getItem("AppSettings.preferences"));
+    var cookieBanner = JSON.parse(localStorage.getItem("cookie-setting"));
+    var shouldTealiumEnable = (!isCCPAEnable || appSettingsPreferences == null || appSettingsPreferences.ccpa_status === "opt-in") 
+                                      && (cookieBanner == null || cookieBanner === true || cookieBanner.isMarketingSelected === true);
+    function setCookie(cname, cvalue) {
+      var date = new Date();
+      date.setTime(date.getTime() + 86400000);
+      var expires = "expires=" + date.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + "; path=/; domain=.agoda.com;";
+    }
+    
+        
+        setCookie("tealiumEnable", shouldTealiumEnable, 1);
+        
+
+    if(shouldTealiumEnable){
+
+
+            
+                isMockMode = document.getElementById("mockDataEnabled")
+                    ? document.getElementById("mockDataEnabled").value === "True"
+                    : false;
+                    if (!isMockMode) {
+                    var tealiumUrl;
+                        tealiumUrl = "//tags.tiqcdn.com/utag/agoda/main2018/prod/utag.js";
+                    var utag_data = {
+                    };
+    
+        
+            window.utag_cfg_ovrd = window.utag_cfg_ovrd || {};
+            window.utag_cfg_ovrd.waittimer = 3000;
+                
+                    var pageParamsPromise = window.propertyPageParamsPromise ||
+                        window.ssr_initialResultsPromise ||
+                        Promise.resolve();
+                    pageParamsPromise.then(function () { (function(a, b, c, d) {
+           a = tealiumUrl;
+           b = document;
+           c = 'script';
+           d = b.createElement(c);
+           d.src = a;
+           d.type = 'text/java' + c;
+           d.async = true;
+           a = b.getElementsByTagName(c)[0];
+           a.parentNode.insertBefore(d, a);
+       })(); });
+                
+        
+    var sessionStatus = "parsingcookiefailed";
+    var sessionId = 0;
+    var isNewSession = 0;
+    try {
+        var tealiumCookie = document.cookie.match('(^|;) ?utag_main=([^;]*)(;|$)')[2].split("$");
+        sessionId = tealiumCookie.filter(function (x) { return x.startsWith("ses_id"); })
+            .map(function (x) { return x.split(":"); })
+                .map(function (x) { return parseInt(x[1].split("%3B")[0]); })
+                    .map(function (x) { return x == NaN ? 0 : x; })[0];
+        sessionStatus = sessionId == 0 ? "invalid" : "valid";
+        isNewSession = tealiumCookie.filter(function (x) { return x.startsWith("_ss"); })
+            .map(function (x) { return x.split(":"); })
+                .map(function (x) { return parseInt(x[1]); })
+                    .map(function (x) { return x == NaN ? 0 : x; })[0];
+    } catch (err) {}
+    if (typeof MessagingClient !== 'undefined') {
+        var messagingClient = MessagingClient.instantiate();
+        var message = messagingClient.create('measurement', {
+            name: 'TealiumUtagFiring',
+            measurement: sessionId,
+            count: 1,
+            tags: {
+                pageTypeId: 1,
+                origin: "US",
+                device: "PHONE",
+                sessionStatus: sessionStatus,
+                browser: "Chrome",
+                IsInternalIp: "False",
+                IsPreRender: "False",
+                IsCrawler: "False",
+                MobileDeviceType: "ANDROID",
+            },
+        });
+    messagingClient.send(message);
+    if (isNewSession == 1) {
+            var newSessionMessage = messagingClient.create('measurement', {
+                name: 'TealiumNewSession',
+                measurement: isNewSession,
+                count: 1,
+                tags: {
+                    pageTypeId: 1,
+                    origin: "US",
+                    device: "PHONE",
+                    sessionStatus: sessionStatus,
+                    browser: "Chrome",
+                    IsInternalIp: "False",
+                    IsPreRender: "False",
+                    IsCrawler: "False",
+                    MobileDeviceType: "ANDROID",
+                },
+            });
+            messagingClient.send(newSessionMessage);
+        }
+    }
+                }
+        
+    }
+</script>
+
+
+
+    <script src="https://cdn6.agoda.net/js/mspa/vendor.300e4e9297ddc59bb135.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-jtb.d5d4bdfcc3a9f53698bb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/svg.bd64a9dc54c815f8c9c7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-rmtmobiletravel.aff71aabd8ad57fa0888.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/initialVendor.f1dfb015d2d22a5f4707.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-japanican.9caa04fe08cfdda26f5f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-rurubu.e84a741a1fbf0a409904.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-priceline.35a33aecd2982a4d9df1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/app.38b865580ec59b73c838.js" crossorigin="anonymous"></script>
+    <script src="https://cdn6.agoda.net/js/mspa/theme-agoda.7b4dbc845930e5ec9ce8.js" crossorigin="anonymous"></script>
+
+
+    <script id="bay-ld-json" type="application/ld+json">
+        [{
+        "@context" : "https://schema.org",
+        "@type" : "Organization",
+        "name" : "Agoda.com",
+        "url" : "https://www.agoda.com",
+        "logo" : "https://cdn6.agoda.net/images/MVC/default/logo-agoda-mobile.png",
+        "sameAs" : [
+        "https://www.facebook.com/agoda",
+        "https://www.instagram.com/agoda/",
+        "https://www.pinterest.com/agodadotcom/",
+        "https://www.youtube.com/user/agodavideos",
+        "https://twitter.com/agoda",
+        "https://plus.google.com/+Agoda",
+        "https://www.linkedin.com/company/agoda",
+        "https://en.wikipedia.org/wiki/Agoda.com"
+        ]
+        },
+        {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "name":"Agoda",
+        "alternateName":"Agoda.com",
+        "url":"https://www.agoda.com/",
+        "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://www.agoda.com/search.html?text={search_term_string}&cid=1766357",
+        "query-input":"required name=search_term_string"
+        }
+        }]
+    </script>
+
+</body></html>

@@ -1,0 +1,61 @@
+<html><head>
+
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+    
+    <script>
+        function carregaIcone(sCodForm, sCodVersao, sPath, sDesEtapa, sValoresPosicao, vetRotaAprovar, vetRotaReprovar, sPosInicio, sPosFim){
+
+          window.open('CarregaIcone.jsp?sCaminho='+sPath+'&sCodForm='+sCodForm+'&sCodVersao='+sCodVersao+'&sDesEtapa='+sDesEtapa+'&sValoresPosicao='+sValoresPosicao+'&rotaAprovar='+vetRotaAprovar+'&rotaReprovar='+vetRotaReprovar+'&sPosInicio='+sPosInicio+'&sPosFim='+sPosFim ,'telaIcone','toolbar=no,location=no,directories=no,status=no,scrollbars=yes,menubar=no,resizable=no,height=360,width=350');
+        }
+
+       function getTop() {
+       		if (window !== window.top) {
+				if (window.top.document.getElementsByTagName('frameset').length > 0) {
+					return window.top.document.getElementsByTagName('frameset')[0].children[1].contentWindow;
+				} else {
+					return window.top;
+				}
+			} else {
+				return window;
+			}
+       }
+    </script>  
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<style type="text/css" media="print">
+		@page{
+			 size: auto;
+			 margin:10mm ;
+			 padding:0mm ;}
+		 frameset, frame {
+			 width: 100% !important; 
+			 margin:0px  !important; 
+			 padding: 0px  !important;}
+		html,body,.c12,.container,#mask,form{
+			width: 100% !important; 
+			margin:0; 
+			padding:0;
+			overflow:visible !important;}
+		.c12{width: 99% !important;}
+		#formulario .campoContainer>ul,
+		#formulario .cabecalho,
+		#formulario_multiplo .campoContainer>ul,
+		#formulario_multiplo .cabecalho { width: 100% !important; }
+		#formulario div.wrapper {overflow:visible !important;} 
+	</style>
+	<style type="text/css">
+		
+	</style>
+<style type="text/css"></style></head>
+
+	<frameset rows="0,*" border="0" frameborder="0" framespacing="0">
+	  <frame name="escondido" src="blank.html" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" noresize="">
+	  <frame name="conteudo" src="minha_area" frameborder="0" marginheight="0" marginwidth="0" noresize="" id="conteudo">
+	</frameset>
+	
+
+</html>

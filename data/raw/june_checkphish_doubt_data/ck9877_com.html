@@ -1,0 +1,198 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-cn">
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+		<meta name="author" content="welcome">
+		<meta name="generator" content="WebStorm Version 2017">
+		<title></title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<script data-pagespeed-no-defer="">
+			(function() {
+				function d(b) {
+					var a = window;
+					if(a.addEventListener) a.addEventListener("load", b, !1);
+					else if(a.attachEvent) a.attachEvent("onload", b);
+					else {
+						var c = a.onload;
+						a.onload = function() {
+							b.call(this);
+							c && c.call(this)
+						}
+					}
+				}
+				var p = Date.now || function() {
+					return +new Date
+				};
+				window.pagespeed = window.pagespeed || {};
+				var q = window.pagespeed;
+
+				function r() {
+					this.a = !0
+				}
+				r.prototype.c = function(b) {
+					b = parseInt(b.substring(0, b.indexOf(" ")), 10);
+					return !isNaN(b) && b <= p()
+				};
+				r.prototype.hasExpired = r.prototype.c;
+				r.prototype.b = function(b) {
+					return b.substring(b.indexOf(" ", b.indexOf(" ") + 1) + 1)
+				};
+				r.prototype.getData = r.prototype.b;
+				r.prototype.f = function(b) {
+					var a = document.getElementsByTagName("script"),
+						a = a[a.length - 1];
+					a.parentNode.replaceChild(b, a)
+				};
+				r.prototype.replaceLastScript = r.prototype.f;
+				r.prototype.g = function(b) {
+					var a = window.localStorage.getItem("pagespeed_lsc_url:" + b),
+						c = document.createElement(a ? "style" : "link");
+					a && !this.c(a) ? (c.type = "text/css", c.appendChild(document.createTextNode(this.b(a)))) : (c.rel = "stylesheet", c.href = b, this.a = !0);
+					this.f(c)
+				};
+				r.prototype.inlineCss = r.prototype.g;
+				r.prototype.h = function(b, a) {
+					var c = window.localStorage.getItem("pagespeed_lsc_url:" + b + " pagespeed_lsc_hash:" + a),
+						f = document.createElement("img");
+					c && !this.c(c) ? f.src = this.b(c) : (f.src = b, this.a = !0);
+					for(var c = 2, k = arguments.length; c < k; ++c) {
+						var g = arguments[c].indexOf("=");
+						f.setAttribute(arguments[c].substring(0, g), arguments[c].substring(g + 1))
+					}
+					this.f(f)
+				};
+				r.prototype.inlineImg = r.prototype.h;
+
+				function t(b, a, c, f) {
+					a = document.getElementsByTagName(a);
+					for(var k = 0, g = a.length; k < g; ++k) {
+						var e = a[k],
+							m = e.getAttribute("data-pagespeed-lsc-hash"),
+							h = e.getAttribute("data-pagespeed-lsc-url");
+						if(m && h) {
+							h = "pagespeed_lsc_url:" + h;
+							c && (h += " pagespeed_lsc_hash:" + m);
+							var l = e.getAttribute("data-pagespeed-lsc-expiry"),
+								l = l ? (new Date(l)).getTime() : "",
+								e = f(e);
+							if(!e) {
+								var n = window.localStorage.getItem(h);
+								n && (e = b.b(n))
+							}
+							e && (window.localStorage.setItem(h, l + " " + m + " " + e), b.a = !0)
+						}
+					}
+				}
+
+				function u(b) {
+					t(b, "img", !0, function(a) {
+						return a.src
+					});
+					t(b, "style", !1, function(a) {
+						return a.firstChild ? a.firstChild.nodeValue : null
+					})
+				}
+				q.i = function() {
+					if(window.localStorage) {
+						var b = new r;
+						q.localStorageCache = b;
+						d(function() {
+							u(b)
+						});
+						d(function() {
+							if(b.a) {
+								for(var a = [], c = [], f = 0, k = p(), g = 0, e = window.localStorage.length; g < e; ++g) {
+									var m = window.localStorage.key(g);
+									if(!m.indexOf("pagespeed_lsc_url:")) {
+										var h = window.localStorage.getItem(m),
+											l = h.indexOf(" "),
+											n = parseInt(h.substring(0, l), 10);
+										if(!isNaN(n))
+											if(n <= k) {
+												a.push(m);
+												continue
+											} else if(n < f || !f) f = n;
+										c.push(h.substring(l + 1, h.indexOf(" ", l + 1)))
+									}
+								}
+								k = "";
+								f && (k = "; expires=" + (new Date(f)).toUTCString());
+								document.cookie =
+									"_GPSLSC=" + c.join("!") + k;
+								g = 0;
+								for(e = a.length; g < e; ++g) window.localStorage.removeItem(a[g]);
+								b.a = !1
+							}
+						})
+					}
+				};
+				q.localStorageCacheInit = q.i;
+			})();
+			pagespeed.localStorageCacheInit();
+		</script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="480">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="welcome">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="./js/ct.css">
+
+		<link type="text/css" href="./cs/pace-theme-minimal.css" rel="stylesheet">
+		<style type="text/css">
+			@media screen and (max-width:640px) {
+				* {
+					width: 100%;
+					padding: 0;
+					margin: 0;
+				}
+				img {
+					width: 100%;
+				}
+				a {
+					width: 90%;
+				}
+			}
+         @media screen and (max-width:414px) {
+				.img1s{
+					width: 80%;
+				}
+				.img2s{
+					width: 50%;
+				}
+				.bottms{
+					margin-bottom: 30px;
+				}
+			}
+          
+          .xiaoqi{
+            width:100%;
+          	height:200px;
+          }
+          body{
+          	background: rgb(17,13,16);
+          }
+          .img2s{
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="container">
+			<div>
+				<h1 id="h1" class="transition-in"></h1>
+				<h2 id="h2" class="transition-in" style="font-family: microsoft yahei"></h2>
+				<div class="center bottms"><img class="img1s" src="./img/image03.png" alt="创造经典 无限革新"></div>
+				<a class="btn_a" id="tiaozhuans" href="http://0076.bet"><img class="img2s" src="./img/image02.png" alt="点击进入官网 Click Continue Access"></a>
+              	<div class="xiaoqi"></div>
+			</div>
+
+		</div>
+
+		<canvas id="canvas" width="1752" height="909"></canvas>
+		<script src="./js/ct1.js"></script></body></html>

@@ -1,0 +1,453 @@
+<html lang="en" class="theme-agoda" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#  place: http://ogp.me/ns/place#" style="--vh:6px; --evil-window-height-miss:0px;"><head>
+<script src="//tags.tiqcdn.com/utag/agoda/main2018/prod/utag.js" type="text/javascript" async=""></script><script>
+    try {
+    !function(e,t){if("object"==typeof exports&&"object"==typeof module)module.exports=t();else if("function"==typeof define&&define.amd)define([],t);else{var n=t();for(var r in n)("object"==typeof exports?exports:e)[r]=n[r]}}(window,(function(){return function(e){var t={};function n(r){if(t[r])return t[r].exports;var i=t[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(r,i,function(t){return e[t]}.bind(null,i));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=35)}({35:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),n(36)},36:function(e,t){var n,r,i,o,u,f,c,a,l,p,s,d;u={passive:!0,capture:!0},f=new Date,c=function(){o=[],r=-1,n=null,s(addEventListener)},a=function(e,t){n||(n=t,r=e,i=new Date,s(removeEventListener),l())},l=function(){if(r>=0&&r<i-f){var e={entryType:"first-input",name:n.type,target:n.target,cancelable:n.cancelable,startTime:n.timeStamp,processingStart:n.timeStamp+r};o.forEach((function(t){t(e)})),o =[]}},p =function(e){if(e.cancelable){var t=(e.timeStamp>
+        1e12?new Date:performance.now())-e.timeStamp;"pointerdown"==e.type?function(e,t){var n=function(){a(e,t),i()},r=function(){i()},i=function(){removeEventListener("pointerup",n,u),removeEventListener("pointercancel",r,u)};addEventListener("pointerup",n,u),addEventListener("pointercancel",r,u)}(t,e):a(t,e)}},s=function(e){["mousedown","keydown","touchstart","pointerdown"].forEach((function(t){return e(t,p,u)}))},d="hidden"===document.visibilityState?0:1/0,addEventListener("visibilitychange",(function e(t){"hidden"===document.visibilityState&&(d=t.timeStamp,removeEventListener("visibilitychange",e,!0))}),!0),c(),self.webVitals={firstInputPolyfill:function(e){o.push(e),l()},resetFirstInputPolyfill:c,get firstHiddenTime(){return d}}}})}));
+    } catch(e) {
+        window.webVitalsPolyfillDebugInfo = e;
+    }
+</script>
+    
+    <script type="text/javascript">
+        // FIR initialization
+        window && window.performance && window.performance.mark && window.performance.mark('FirstImportantRendering-start');
+        // TODO: remove inline TTI polyfill and rely on PerformanceClient
+        // TTI initialization
+        // ref: https://github.com/GoogleChromeLabs/tti-polyfill
+        !function () {
+            if (window && window.PerformanceLongTaskTiming && window.PerformanceObserver) {
+                var g = window.__tti = { e: [] };
+                g.o = new PerformanceObserver(function (l) {
+                    g.e = g.e.concat(l.getEntries())
+                });
+                if (g.o && g.o.observe) {
+                    g.o.observe({ entryTypes: ['longtask'] })
+                }
+            }
+        }();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="agoda:siteid" content="mspa">
+    <link rel="SHORTCUT ICON" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+
+<style>
+    .theme-agoda .loader > span:nth-child(1) {
+        background-color: #ff2938;
+    }
+
+    .theme-agoda .loader > span:nth-child(2) {
+        background-color: #fdb812;
+    }
+
+    .theme-agoda .loader > span:nth-child(3) {
+        background-color: #00b057;
+    }
+
+    .theme-agoda .loader > span:nth-child(4) {
+        background-color: #af38b1;
+    }
+
+    .theme-agoda .loader > span:nth-child(5) {
+        background-color: #00aae0;
+    }
+</style>        
+    <style>
+        #agoda-spa {
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAABh0lEQVR42u3TQREAAAQAMPrndedHAQnc1mHZVRPAKQUBQUAQEAQEAUFAEBAEBAFBAEFAEBAEBAFBQBAQBAQBQUAQQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEAQQBAQBQUAQEAQEAUFAEBAEEAQEAUFAEBAEBAFBQBAQBAQBBAFBQBAQBAQBQUAQEAQEAQQBQUAQEAQEAUFAEBAEBAFBAEFAEBAEBAFBQBAQBAQBQUAQQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEEQQEAQEAUFAEBAEBAFBQBAQBBAEBAFBQBAQBAQBQUAQEAQEAQQBQUAQEAQEAUFAEBAEBAEEAUFAEBAEBAFBQBAQBAQBQQBBQBAQBAQBQUAQEAQEAUEAQUAQEAQEAUFAEBAEBAFBQBBAEBAEBAFBQBAQBAQBQUAQEEQQEAQEAUFAEBAEBAFBQBAQBBAEBAFBQBAQBAQBQUAQEAQEEQQEAUFAEBAEBAFBQBD4aAHC1Ai+2hrMBAAAAABJRU5ErkJggg==);
+            background-size: cover;
+        }
+        html,
+        body,
+        #agoda-spa {
+            display: flex;
+            display: -webkit-flex;
+            flex: 1;
+            -webkit-flex: 1;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+        }
+
+            #agoda-spa.backgroundFromServer {
+                background-image: url('https://cdn6.agoda.net/images/mobile/FUSIONFE-160/bg_mspa.jpg');
+                background-position-x: 0;
+                background-position-y: 0;
+                background-size: 100% 100%;
+            }
+                    
+
+                .backgroundSpace {
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   overflow: hidden;
+                   width: 100vw;
+                   height: 100%;
+               }
+        
+                .backgroundContainer {
+                   width: 50vw;
+                   height: 50vh;
+                }
+            
+        html {
+            height: 100%;
+        }     
+        * {
+            touch-action: manipulation;
+        }
+        #agoda-splash {
+            display: flex;
+            display: -webkit-flex;
+            flex: 1;
+            -webkit-flex: 1;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+            justify-content: center;
+            -webkit-justify-content: center;
+            align-items: center;
+            -webkit-align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: opacity 0.4s ease-out;
+            transition-delay: 0.2s;
+            z-index: 100;
+        }
+        #agoda-splash .agodaSplashPanel {
+            background-color: white;
+            padding: 14px 15px;
+            border-radius: 8px;
+        }
+        #agoda-splash.hide {
+           opacity: 0;
+        }
+        #agoda-splash.display-none {
+            display: none;
+        }
+        .loader {
+            display: flex;
+            display: -webkit-flex;
+            margin-top: 3px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+ 
+        .loader span {
+            width: 16px;
+            height: 16px;
+            margin: 0 4px;
+            opacity: 0;
+            border-radius: 50%;
+            -webkit-animation: loaderFade 1s infinite;
+            -moz-animation: loaderFade 1s infinite;
+            -o-animation: loaderFade 1s infinite;
+            -ms-animation: loaderFade 1s infinite;
+            animation: loaderFade 1s infinite;
+        }
+ 
+        .loader > span:nth-child(1) {
+            background-color: #e44746;
+            -webkit-animation-delay: -0.5s;
+            -moz-animation-delay: -0.5s;
+            -o-animation-delay: -0.5s;
+            -ms-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+ 
+        .loader > span:nth-child(2) {
+            background-color: #ffa726;
+            -webkit-animation-delay: -0.4s;
+            -moz-animation-delay: -0.4s;
+            -o-animation-delay: -0.4s;
+            -ms-animation-delay: -0.4s;
+            animation-delay: -0.4s;
+        }
+ 
+        .loader > span:nth-child(3) {
+             background-color: #85c150;
+            -webkit-animation-delay: -0.3s;
+            -moz-animation-delay: -0.3s;
+            -o-animation-delay: -0.3s;
+            -ms-animation-delay: -0.3s;
+            animation-delay: -0.3s;
+        }
+ 
+        .loader > span:nth-child(4) {
+            background-color: #8c69ca;
+            -webkit-animation-delay: -0.2s;
+            -moz-animation-delay: -0.2s;
+            -o-animation-delay: -0.2s;
+            -ms-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+        }
+ 
+        .loader > span:nth-child(5) {
+            background-color: #488bf8;
+            -webkit-animation-delay: -0.1s;
+            -moz-animation-delay: -0.1s;
+            -o-animation-delay: -0.1s;
+            -ms-animation-delay: -0.1s;
+            animation-delay: -0.1s;
+        }
+ 
+        .no-touch {
+            touch-action: none;
+            pointer-events: none;
+        }
+ 
+        @keyframes logoAnim {
+            0%, 100% {
+                opacity: 0.2;
+            }
+ 
+            50% {
+                opacity: 1;
+            }
+        }
+ 
+        .whiteLabelLogo {
+            animation-name: logoAnim;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @-webkit-keyframes loaderFade { 0% { opacity: 1; } 20% { opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; } } @-moz-keyframes loaderFade { 0% { opacity: 1; } 20% { opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; } } @keyframes loaderFade { 0% {opacity: 1;} 20% {opacity: 1; } 50% { opacity: 0; } 80% { opacity: 1; } 100% { opacity: 1; }
+    </style>
+        
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.feMessagingUrl = '/js/assets/cronos/Assets/mcjs-worker.js';
+        dictatorParams.polyFillFeMessagingUrl = '/js/assets/cronos/Assets/mcjs-polyfills.js';
+        dictatorParams.cid = -1;
+        dictatorParams.aid = 130243;
+        dictatorParams.pageId = 1;
+        dictatorParams.sessionId = "m3emcbkv1lz0p20mutrvx5m4";
+        dictatorParams.redirectModel = {"overlayBanner":{"messageId":"OverlayBanner","messageViewName":"OverlayBanner","section":null,"priority":0,"isShowPopup":false,"attributes":{"agodaHeaderText":"Agoda – Best deals on hotels and vacation rentals","agodaDetailText":"(70,000+ 5-star reviews)","messageText":"We have even lower prices in our app!","installButton":"See great deals in our app","continueInSiteButton":"Continue to mobile site","openInAppLink":"http://agoda.onelink.me/1640755593?pid=redirect&c=OverlayBanner&af_dp=agoda%3A%2F%2Fhome&adults=1&children=0&rooms=1&checkIn=2021-07-27&checkOut=2021-07-28&site_id=-1&af_siteid=-1&af_sub1=EXP-ID-0&af_sub2=EXP-RUN-ID-0&af_sub3=89024a86-31f7-4f27-95d0-df28e7ff6087&af_force_dp=true&af_click_lookback=1d","isAndroidDeviceType":"true"}},"promoOverlay":null,"whiteBanner":null,"tallBanner":null,"showPulseCarousel":true,"redirectProperties":{"devicePlatform":"PHONE","mobileDeviceType":"ANDROID","browserName":"Opera Touch for Android","origin":"US","isLogin":"False","trafficType":"User"},"showAppPrices":false};
+        dictatorParams.machineName = "cronos-spa-prod-85df54777b-98jlm";
+        dictatorParams.cttp = 4;
+        dictatorParams.userId = "89024a86-31f7-4f27-95d0-df28e7ff6087";
+        dictatorParams.mseSearchDetails = [];
+        dictatorParams.isWhiteLabel = true;
+        dictatorParams.searchEngineClicks = {};
+        dictatorParams.isFlightPhaseExperimentActive = false;
+        dictatorParams.isHideFlightsMenu = false;
+        dictatorParams.gwUrl= 'www.agoda.com/api/gw';
+        dictatorParams.gwPciUrl= 'gwpci.agoda.com';
+        dictatorParams.webgateUrl = '//www.agoda.com';
+        dictatorParams.mainSiteUrl = 'www.agoda.com';
+        dictatorParams.isCcpaPolicyMenuLink = true;
+        dictatorParams.isLandingHotel = false;
+        dictatorParams.isAddedGeoContent = false;
+        dictatorParams.isAddedHotelFaq = false;
+        dictatorParams.isGetRateplanForDatelessHotelPage = false;
+        dictatorParams.isFixNavigation = false;
+        dictatorParams.isMultiHotels =  true;
+        dictatorParams.isPackagesMSPA = false;
+        dictatorParams.isBfMilestone3 = true;
+        dictatorParams.isBundleOptimized = true;
+        dictatorParams.upgradeTslib = true;
+        dictatorParams.renderBackgroundFromServer = true;
+        dictatorParams.enableAccessibilityTheme = true;
+        dictatorParams.isFontTextSearchCalendarOccupancy = true;
+        dictatorParams.fontSSR = false;
+        dictatorParams.fontRoomGrid = true;
+        dictatorParams.flightFixOnlineBankingCancellationFlow = true;
+        dictatorParams.batchApplicationDataDispatch = false;
+        dictatorParams.earlySearchResultCall = false;                
+        dictatorParams.isMspaHideAddressBar = false;
+        dictatorParams.asqLosTooltipsMspa = false;
+        dictatorParams.asqLosConfiguration = {"106":[14,15],"132":[7,14,21]};
+        dictatorParams.iswebVitalsV2Enabled =  true;
+        dictatorParams.asqAllowedCities = true;
+        dictatorParams.asqAllowedCitiesConfiguration = {"16056":{"config":{"losConfig":[],"badgeCmsId":130223}}};
+      
+
+
+
+    </script>
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.whiteLabelBrandLogo = "https://cdn6.agoda.net/images/MVC/default/agoda-logo-v2.png";
+        dictatorParams.isMaintenanceMode = false;
+        dictatorParams.isEmergencyMode = false;
+        dictatorParams.isBookingForMaintenanceModeEnabled = false;
+    </script>
+    <script type="text/javascript">
+        var dictatorParams = dictatorParams || {};
+        dictatorParams.shouldShowDomesticName = false;
+    </script>
+
+    <script type="text/javascript">
+            window.prerender = {
+                mandatoryComponentsFeatureEnabled: true,
+                mandatoryComponentsFinishedRendering: function () {
+                    return false;
+                },
+            };
+        </script>
+        <link href="https://cdn6.agoda.net/js/mspa/theme-agoda.9d9db30069a839513966.css" rel="stylesheet">
+        <link href="https://cdn6.agoda.net/js/mspa/app.da5af154913f5aa7d9cb.css" rel="stylesheet">
+    
+        <script type="text/javascript">
+            sessionStorage.setItem('mspaConsulRetry', null);
+        </script>
+</head>
+    <body class="theme-agoda OWL-MMB-MOBILE OWL-INTER OWL-714 OWL-748 OWL-808 OWL-810 DEXP-221  DEXP-268">
+            <div class="backgroundSpace" data-lcp="false">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="backgroundContainer"></div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+
+        <div id="agoda-spa" class="backgroundFromServer" data-lcp="true"><div class="SimpleMessage__messageWrapper--aS2iG" data-component="SimpleMessage"><div class="SimpleMessage__message--3cINS SimpleMessage__hide--2yAqi SimpleMessage__base--1vdIa SimpleMessage__padding--qt1WY" message-type="none"></div></div></div>
+        <div id="agoda-splash">
+                    <div class="agodaSplashPanel">
+<svg width="121" height="36" viewBox="0 0 121 36" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#5f5d5b"><path d="M19.42 17.55c0-3.59-2.723-6.312-6.326-6.312-3.599 0-6.322 2.722-6.322 6.311 0 3.594 2.723 6.311 6.322 6.311 3.603 0 6.326-2.715 6.326-6.31m-15.92 0c0-5.335 4.287-9.36 9.594-9.36 5.307 0 9.594 3.988 9.594 9.322V25.5c0 .943-.65 1.632-1.67 1.632-1.054 0-1.672-.69-1.672-1.632v-1.927h-.217c-1.057 1.85-3.197 3.336-6.289 3.336-5.123 0-9.34-4.025-9.34-9.36M43.124 17.55c0-3.588-2.727-6.31-6.323-6.31-3.6 0-6.329 2.722-6.329 6.31 0 3.593 2.727 6.312 6.33 6.312 3.595 0 6.322-2.72 6.322-6.311M30.909 32.935c-.87-.433-1.274-1.197-.907-2.07.396-.905 1.269-1.233 2.106-.798 1.273.582 2.834.983 4.4.983 4.104 0 6.542-2.392 6.542-6.46v-1.013h-.22c-1.053 1.849-3.198 3.335-6.29 3.335-5.12 0-9.339-4.025-9.339-9.36s4.292-9.36 9.6-9.36c5.302 0 9.594 3.99 9.594 9.324v6.858c0 5.807-3.82 9.8-9.997 9.8-1.923-.004-3.853-.407-5.489-1.24M66.826 17.55c0-3.59-2.724-6.312-6.326-6.312-3.599 0-6.322 2.722-6.322 6.311 0 3.594 2.723 6.311 6.322 6.311 3.6 0 6.326-2.715 6.326-6.31m-15.92 0c0-5.335 4.25-9.36 9.594-9.36 5.307 0 9.594 4.025 9.594 9.36s-4.287 9.36-9.594 9.36c-5.344 0-9.593-4.026-9.593-9.36M90.528 17.55c0-3.59-2.727-6.312-6.322-6.312-3.601 0-6.33 2.722-6.33 6.311 0 3.594 2.727 6.311 6.33 6.311 3.595 0 6.322-2.715 6.322-6.31m-15.921 0c0-5.335 4.22-9.36 9.34-9.36 3.091 0 5.2 1.486 6.288 3.335h.22V2.46c0-.943.651-1.633 1.673-1.633 1.052 0 1.673.69 1.673 1.633v15.127c0 5.334-4.292 9.323-9.594 9.323-5.308 0-9.6-4.025-9.6-9.36M114.227 17.55c0-3.59-2.724-6.312-6.323-6.312s-6.322 2.722-6.322 6.311c0 3.594 2.723 6.311 6.322 6.311s6.323-2.715 6.323-6.31m-15.916 0c0-5.335 4.286-9.36 9.593-9.36s9.594 3.988 9.594 9.322V25.5c0 .943-.65 1.632-1.673 1.632-1.052 0-1.67-.69-1.67-1.632v-1.927h-.216c-1.057 1.85-3.197 3.336-6.289 3.336-5.127 0-9.34-4.025-9.34-9.36"></path></g>
+</svg>
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>                    </div>
+            
+        </div>
+
+    <div id="baymax-stamp"><!-- Baymax Allo  --></div>
+    
+
+        <script src="https://cdn6.agoda.net/js/mspa/vendor.300e4e9297ddc59bb135.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-jtb.d5d4bdfcc3a9f53698bb.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/svg.bd64a9dc54c815f8c9c7.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-rmtmobiletravel.aff71aabd8ad57fa0888.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/initialVendor.f1dfb015d2d22a5f4707.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-japanican.9caa04fe08cfdda26f5f.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-rurubu.e84a741a1fbf0a409904.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-priceline.35a33aecd2982a4d9df1.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/app.38b865580ec59b73c838.js" crossorigin="anonymous"></script>
+        <script src="https://cdn6.agoda.net/js/mspa/theme-agoda.7b4dbc845930e5ec9ce8.js" crossorigin="anonymous"></script>
+
+<script id="bay-ld-json" type="application/ld+json">
+    [{
+    "@context" : "https://schema.org",
+    "@type" : "Organization",
+    "name" : "Agoda.com",
+    "url" : "https://www.agoda.com",
+    "logo" : "https://cdn6.agoda.net/images/MVC/default/logo-agoda-mobile.png",
+    "sameAs" : [
+    "https://www.facebook.com/agoda",
+    "https://www.instagram.com/agoda/",
+    "https://www.pinterest.com/agodadotcom/",
+    "https://www.youtube.com/user/agodavideos",
+    "https://twitter.com/agoda",
+    "https://plus.google.com/+Agoda",
+    "https://www.linkedin.com/company/agoda",
+    "https://en.wikipedia.org/wiki/Agoda.com"
+    ]
+    },
+    {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Agoda",
+    "alternateName":"Agoda.com",
+    "url":"https://www.agoda.com/",
+    "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://www.agoda.com/search.html?text={search_term_string}&cid=1766357",
+    "query-input":"required name=search_term_string"
+    }
+    }]
+</script>    <script>
+        var agoda = agoda || {};
+        agoda.isCronosSpa = true;
+    </script>
+
+<script type="text/javascript" id="messagingClientLite">
+!function(t,n){if("object"==typeof exports&&"object"==typeof module)module.exports=n();else if("function"==typeof define&&define.amd)define([],n);else{var e=n();for(var r in e)("object"==typeof exports?exports:t)[r]=e[r]}}("undefined"!=typeof self?self:this,function(){return function(t){var n={};function e(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,e),i.l=!0,i.exports}return e.m=t,e.c=n,e.d=function(t,n,r){e.o(t,n)||Object.defineProperty(t,n,{enumerable:!0,get:r})},e.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},e.t=function(t,n){if(1&n&&(t=e(t)),8&n)return t;if(4&n&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(e.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&n&&"string"!=typeof t)for(var i in t)e.d(r,i,function(n){return t[n]}.bind(null,i));return r},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},e.p="",e(e.s=150)}({12:function(t,n,e){"use strict";function r(t,n,e){for(var r=e.length,i=0;i<r;i++){var o=e[i];if(o)for(var u in o)o.hasOwnProperty(u)&&t(u,o[u])}}e.d(n,"a",function(){return r})},150:function(t,n,e){"use strict";e.r(n);var r=e(29),i=e(17),o=function(){function t(){this.buffer={items:[]},this.contextData={}}return t.prototype.send=function(n){var e=this.buffer.items,r=t.MaxBufferSize-e.length;r>0&&(n instanceof Array?(r<n.length&&(n=n.slice(0,r)),this.buffer.items=n.concat(e)):this.buffer.items.push(n))},t.prototype.dispose=function(t){this.buffer.items.length=0,t&&t()},t.prototype.environment=function(t){},t.prototype.context=function(t){var n=this.contextData;n.sessionId=t.sessionId||n.sessionId,n.userId=t.userId||n.userId},t.MaxBufferSize=15e3,t}(),u=e(42);e.d(n,"MessagingClient",function(){return f});var f=function(){function t(t){this._test=t}return t.create=function(n){return t.instantiate(n)},t.instantiate=function(n){return(new t).instantiate(n)},t.environment=function(n){return new t(n)},t.prototype.instantiate=function(t){var n=i.a.get();if(n.environment=n.environment||t,n.test=n.test||this._test,n.messagingClient)return n.messagingClient;var e=new o,f=new u.a(e,new r.a);return n.buffer=e.buffer,n.context=e.contextData,n.messagingClient=f,f},t}()},17:function(t,n,e){"use strict";e.d(n,"a",function(){return o});var r=e(4),i="MessagingClient-LiteData",o=function(){function t(){}return t.get=function(){var t=r.a.current();return t[i]||(t[i]={})},t.clear=function(){delete r.a.current()[i]},t}()},18:function(t,n){var e;e=function(){return this}();try{e=e||new Function("return this")()}catch(t){"object"==typeof window&&(e=window)}t.exports=e},20:function(t,n,e){"use strict";e.d(n,"a",function(){return r});var r=function(){function t(){}return t.current=function(){return window&&window.__MCJS_EXTENSION_DATA__||{}},t}()},29:function(t,n,e){"use strict";e.d(n,"a",function(){return r});var r=function(){function t(){}return t.prototype.now=function(){return+new Date},t}()},4:function(t,n,e){"use strict";(function(t){e.d(n,"a",function(){return r});var r=function(){function n(){}return n.current=function(){var n="undefined"!=typeof window?window:"undefined"!=typeof self?self:void 0!==t?t:null;if(!n)throw new Error("Unsupported environment.");return n},n}()}).call(this,e(18))},42:function(t,n,e){"use strict";var r=e(20),i=e(12);e.d(n,"a",function(){return o});var o=function(){function t(t,n){this.sender=t,this._time=n}return t.prototype.create=function(t,n){var e={_meta:{type:t}};return n&&function(t){for(var n=[],e=1;e<arguments.length;e++)n[e-1]=arguments[e];t||(t={}),Object(i.a)(function(n,e){void 0===t[n]&&(t[n]=e)},t,n)}(e,n),e},t.prototype.send=function(t,n){if(!t||!t._meta)throw new Error("Message or message type is undefined");(t=JSON.parse(JSON.stringify(t)))._meta.timestamp=this._time.now(),t._meta.tabId=r.a.current().tabId,this.sender.send(t,n)},t.prototype.debug=function(t){this.sender.environment({debug:t})},t.prototype.context=function(t){this.sender.context(t)},t}()}})});
+</script>
+<script>
+    var rtag = {"countryId":0,"countryOrigin":"US","stateOrigin":"","cityId":0,"cid":-1,"tag":"","sid":0,"pageTypeId":1,"languageId":1,"languageCode":"en-us","isDev":false,"isQA":false,"isLive":true,"isRealUser":true,"userVipLevel":-1,"adult":0,"children":0,"deviceType":"m","attributionViewModel":{"hasSessionFirstClick":true,"sessionFirstClickAttributionCID":"-1","sessionFirstClickAttributionTag":"","sessionFirstClickAttributionModelID":"19","sessionFirstClickAttributionClickDate":"2021-07-27T08:40:29","sessionFirstClickAttributionAdditionalData":"{\u0022IsPaid\u0022:False}","hasCookieLastClick":true,"cookieLastClickAttributionCID":"-1","cookieLastClickAttributionTag":"","cookieLastClickAttributionModelID":"20","cookieLastClickAttributionClickDate":"2021-07-27T08:40:29","cookieLastClickAttributionAdditionalData":"{\u0022IsPaid\u0022:False}"},"bltId":0,"currencyCode":"USD","tax":0,"totalPriceTaxExc":0,"totalPriceTaxInc":0,"trafficGroup":0,"trafficSubGroup":0,"isMspa":false,"defaultTealiumUrl":"//tags.tiqcdn.com/utag/agoda/main2018/prod/utag.js","tealiumProfile":"main2018","experimentManager":{"seenExperiments":{"PER-7467":{"experimentId":1044063,"experimentRunId":1185089,"variant":"B"},"BAY-AGODA-THEME":{"experimentId":1043764,"experimentRunId":1186007,"variant":"A"},"PER-6346-MSPA-4":{"experimentId":1036132,"experimentRunId":1170292,"variant":"B"},"OPA-612":{"experimentId":1043806,"experimentRunId":1183884,"variant":"A"},"MSPA-2547":{"experimentId":1035721,"experimentRunId":1175007,"variant":"Z"},"MSPA-BF-M3":{"experimentId":1038237,"experimentRunId":1185795,"variant":"B"},"MKTBB-5389-M":{"experimentId":1036921,"experimentRunId":1179232,"variant":"Z"},"PER-7019":{"experimentId":1041050,"experimentRunId":1184746,"variant":"A"},"PER-6346-MSPA-1":{"experimentId":1036129,"experimentRunId":1177849,"variant":"A"},"CH-1932":{"experimentId":1042435,"experimentRunId":1184114,"variant":"A"},"PER-7380":{"experimentId":1043303,"experimentRunId":1184646,"variant":"A"},"PER-6346-MSPA-2":{"experimentId":1036130,"experimentRunId":1170290,"variant":"A"},"PER-7212":{"experimentId":1041944,"experimentRunId":1177850,"variant":"Z"},"DEXP-268":{"experimentId":1042375,"experimentRunId":1185577,"variant":"B"},"PER-6346-MSPA-5":{"experimentId":1036133,"experimentRunId":1170293,"variant":"A"}},"experimentState":{"activeIds":[1039610,1027618,1034812,1044360,1042142,1043184,1020262,1040197,1043843,1027390,1042457,1019362,1027635,1043655,1042036,1027506,1034771,1043743,1036492,1027588,1024787,1042846,1042192,1043318,1041226,1038691,1044117,1040188,1043981,1034425,1027574,1043829,1042907,1043073,1034715,1041244,1038183,1044405,1033613,1037959,1044126,1033810,1044093,1038237,1043827,1043513,1044015,1042844,1040893,1042614,1033371,1043562,1042443,1038769,1044165,1030457,1044331,1043182,1043653,1040198,1041290,1042218,1041272,1038931,1043773,1040228,1039613,1024354,1036722,1043964,1044279,1043768,1023753,1044191,1034809,1043334,1027114,1038420,1043068,1030077,1041361,1027471,1027496,1039599,1027474,1043557,1043810,1041793,1040407,1042956,1041040,1027484,1044111,1044288,1039546,1036999,1034632,1042234,1044210,1036878,1042573,1042194,1040705,1040398,1019283,1043187,1044247,1043900,1044122,1041354,1043895,1027630,1042976,1043607,1040217,1040528,1043251,1027499,1043402,1039564,1039397,1041639,1044372,1042984,1039156,1027642,1043673,1043953,1035325,1038093,1044171,1044094,1043135,1039334,1037053,1043654,1041313,1037719,1027554,1041525,1037273,1043797,1038410,1029082,1042919,1043808,1027589,1039011,1044184,1027606,1040400,1030092,1041963,1044180,1027573,1034369,1042202,1044178,1041756,1043983,1043954,1037136,1042649,1044156,1027591,1040800,1034915,1043726,1044370,1041158,1027519,1042126,1039393,1028152,1040048,1016823,1044008,1040981,1043051,1035870,1041945,1039414,1035829,1043830,1039960,1041575,1019307,1043937,1035000,1044382,1014577,1040183,1044250,1042562,1043462,1019132,1043421,1044177,1026361,1040186,1027624,1042505,1039909,1036885,1040464,1043604,1041670,1037129,1042881,1041372,1043754,1040645,1037922,1043847,1042560,1041642,1042593,1039805,1027481,1037004,1038545,1026933,1043657,1024423,1044218,1044385,1040058,1044264,1027518,1043531,1039406,1042596,1041033,1044320,1043792,1043688,1041628,1040798,1039671,1042831,1043400,1042245,1044181,1027617,1043202,1024118,1024308,1039235,1039428,1042834,1041916,1038785,1042160,1040948,1044090,1039123,1027514,1027632,1037639,1042067,1027501,1033819,1043558,1021293,1036252,1041805,1040169,1044125,1040421,1043640,1044267,1043535,1044004,1042286,1022274,1023593,1043922,1035878,1043648,1044274,1044236,1031416,1044148,1044323,1044005,1042486,1043644,1028599,1042863,1044188,1035052,1041482,1043489,1044219,1027572,1041761,1043889,1042120,1040444,1044144,1027487,1044124,1031369,1044176,1037239,1043508,1043884,1043832,1034756,1037038,1043834,1042333,1042890,1035676,1043716,1043691,1039812,1044221,1027593,1024531,1033019,1027517,1042426,1043478,1043668,1043869,1043765,1042204,1038556,1044006,1027559,1027550,1040602,1044378,1041320,1043914,1044053,1027569,1043356,1043134,1027560,1038308,1044155,1041516,1041344,1042428,1040946,1027629,1040540,1043239,1043744,1043121,1043188,1020964,1033579,1040078,1043451,1040834,1034882,1044121,1040258,1043985,1043806,1044023,1040471,1043448,1042398,1032785,1042953,1040046,1040317,1037346,1042829,1044283,1022313,1041586,1041333,1022319,1044344,1038996,1042914,1039415,1038627,1042850,1044404,1039040,1039722,1035623,1044140,1043789,1042215,1041412,1040007,1039626,1043403,1036188,1042118,1044228,1043405,1037890,1043186,1044167,1043033,1041928,1041980,1041514,1044003,1042217,1042240,1043965,1040173,1039418,1034988,1037716,1022628,1042509,1042644,1027491,1036346,1043156,1035072,1031801,1040577,1043247,1044284,1043848,1040659,1040409,1031374,1042856,1036666,1038319,1040374,1042309,1039803,1040267,1041505,1036216,1033367,1039934,1037275,1043208,1041778,1027521,1027493,1042082,1042808,1041944,1044402,1020763,1043245,1038719,1026399,1041350,1038863,1044139,1034773,1043992,1043548,1040729,1041977,1043958,1027548,1040489,1044109,1041658,1044301,1040446,1043468,1027539,1041748,1044287,1034870,1044362,1035810,1042553,1043106,1028693,1041855,1043933,1039333,1020617,1042755,1042000,1043150,1044179,1044183,1039989,1039938,1043197,1039600,1036042,1033961,1043878,1042209,1042838,1042752,1024784,1036347,1027549,1044321,1043905,1043205,1029989,1043748,1027529,1041213,1043303,1034175,1043835,1043772,1042314,1035985,1035931,1042568,1037248,1042079,1018169,1043977,1038247,1026688,1034880,1044133,1043763,1036500,1041110,1043946,1034717,1042917,1026820,1027461,1044278,1042839,1044329,1037900,1043957,1044306,1040472,1032159,1044319,1037190,1027644,1044270,1042658,1039139,1043292,1042788,1042375,1042867,1024594,1042841,1044185,1042351,1043458,1042566,1044159,1043253,1040284,1043230,1041090,1031616,1027597,1041245,1022118,1042920,1035150,1041032,1027466,1039200,1039785,1036586,1043274,1043782,1043036,1034603,1043620,1044142,1042586,1042197,1040895,1043201,1036968,1027482,1020980,1042017,1042569,1042570,1035833,1040925,1042545,1044036,1042830,1041259,1036922,1044229,1044012,1042500,1042840,1044054,1044291,1043874,1044333,1044249,1044007,1042131,1027568,1039515,1043883,1041183,1032322,1037310,1031372,1029039,1041757,1035551,1038560,1035912,1027614,1043049,1042993,1042425,1038120,1043841,1042004,1043085,1027598,1036695,1026362,1035763,1042056,1009602,1029030,1035317,1039741,1027453,1040435,1044123,1042430,1027477,1035499,1036764,1016168,1039521,1042978,1030125,1035365,1043445,1043469,1043761,1038770,1043861,1041477,1039575,1043615,1042968,1039271,1043842,1039769,1043543,1043671,1038253,1042836,1043974,1043717,1043501,1043624,1040352,1038613,1044186,1042858,1043606,1040995,1042220,1027583,1027467,1044042,1043099,1043695,1044309,1026363,1023200,1044009,1040449,1040992,1043610,1043718,1043949,1044134,1042095,1035818,1038722,1037520,1043373,1042285,1043140,1037288,1039433,1033732,1043032,1037349,1022188,1038513,1030938,1040399,1043758,1043439,1040582,1034763,1035655,1040323,1043945,1043411,1042515,1018793,1042280,1038210,1009603,1012733,1044153,1041517,1040349,1042529,1034969,1040178,1041939,1033507,1033699,1044273,1040410,1021177,1039434,1038938,1042402,1042497,1041126,1044084,1037549,1040657,1029208,1043047,1044027,1044076,1039036,1044112,1038592,1039542,1040202,1042397,1043759,1044192,1043679,1043865,1027522,1040179,1032967,1043677,1033932,1042945,1044018,1044317,1043839,1044366,1015851,1044119,1039854,1036160,1027581,1035268,1043871,1042005,1026804,1042832,1044168,1041465,1038872,1044203,1041676,1042394,1040734,1041713,1020116,1044340,1038982,1041106,1043254,1039679,1042346,1039012,1043587,1041161,1038880,1035177,1044240,1038411,1044088,1043633,1027640,1041815,1039399,1020683,1043881,1027500,1025179,1043721,1033106,1038673,1027612,1034911,1042102,1027492,1043951,1043855,1028132,1039775,1027490,1042551,1034506,1041460,1044044,1038378,1038911,1031414,1044365,1042902,1040499,1027594,1038635,1040190,1044193,1038723,1042605,1027590,1034650,1018885,1039206,1042659,1042835,1038331,1043825,1042395,1044104,1035174,1042894,1041271,1042538,1040255,1044409,1027449,1044254,1042520,1027513,1043669,1040898,1043893,1027468,1037777,1030432,1044225,1033842,1042842,1037689,1039038,1040761,1040221,1044325,1043255,1043509,1030716,1035681,1035721,1031784,1043470,1040204,1041693,1040646,1041577,1042530,1032277,1039128,1040395,1036921,1043444,1043683,1037627,1044021,1043787,1042866,1034957,1044282,1040238,1044391,1037553,1039823,1029160,1038879,1042640,1044019,1041420,1044244,1039147,1044017,1027571,1041955,1043921,1044158,1040195,1037502,1043911,1028560,1042431,1041430,1042080,1038764,1043515,1043956,1031808,1027503,1035564,1038636,1044065,1043446,1042857,1039645,1040272,1041406,1044083,1043554,1039392,1044256,1030216,1036341,1043828,1040541,1041346,1022210,1036584,1042143,1027497,1024575,1035194,1040411,1010416,1042494,1041012,1032663,1041746,1038994,1037299,1042100,1035351,1041840,1038207,1044285,1036375,1036123,1027556,1044170,1041444,1041938,1043734,1043745,1027531,1038452,1036133,1034901,1039997,1042891,1040473,1035638,1043811,1041571,1044146,1032839,1027515,1040319,1018168,1039916,1034033,1043267,1042650,1044223,1038890,1039594,1039023,1042479,1013784,1037812,1039425,1041649,1044135,1043048,1043320,1043713,1027628,1043532,1041413,1038932,1043650,1018435,1043626,1035904,1044399,1031490,1027547,1030577,1044102,1043769,1036576,1043880,1043967,1035286,1041068,1042722,1044089,1042854,1037597,1041734,1043503,1043064,1042733,1043663,1039777,1037544,1041490,1039405,1038215,1043904,1039019,1039757,1021094,1039160,1037242,1044248,1044235,1042879,1021287,1020626,1041949,1044073,1044292,1042988,1038429,1044045,1034643,1043352,1037840,1041827,1041503,1041534,1027579,1035471,1043297,1038941,1027587,1044253,1043220,1040806,1042492,1043540,1044289,1037235,1043199,1043483,1032938,1037374,1043311,1027602,1043414,1015460,1042661,1043394,1042076,1041077,1027567,1044057,1027475,1038762,1044143,1043976,1042982,1044341,1024785,1041398,1044269,1038391,1042706,1029119,1041797,1027469,1043924,1027555,1043805,1042223,1035891,1044226,1043852,1040149,1036673,1027489,1027534,1043971,1039482,1039017,1042639,1043561,1039417,1009896,1044322,1040719,1022827,1043492,1024270,1040601,1042751,1035825,1036701,1042776,1042016,1042513,1044246,1040181,1042935,1038537,1031170,1039567,1040316,1030099,1039419,1027455,1043546,1043475,1043200,1037120,1040210,1035637,1042985,1044296,1041832,1040815,1042299,1043545,1044232,1044227,1042924,1043595,1042334,1044000,1044152,1040084,1042933,1042663,1040534,1041799,1042510,1043960,1027570,1027438,1042778,1043104,1043837,1038975,1043155,1044010,1027577,1023246,1034817,1044100,1027596,1042276,1043263,1043459,1042852,1035019,1027463,1042254,1042084,1031851,1042198,1027542,1039065,1017015,1042762,1040375,1039056,1043767,1037962,1022375,1031169,1040356,1040913,1040171,1041260,1041365,1041749,1043916,1030498,1022374,1036164,1039850,1041178,1017709,1040575,1043290,1031366,1027516,1027637,1043461,1043321,1040209,1043623,1043609,1040838,1041699,1039134,1040324,1042511,1043867,1039964,1038871,1043948,1029996,1043813,1043505,1043565,1043833,1041337,1026622,1034238,1037903,1036876,1020935,1044085,1044086,1027523,1044401,1044095,1042508,1041696,1042625,1043488,1041806,1043430,1043523,1031804,1043891,1044114,1029648,1043853,1036132,1043408,1042905,1036867,1036129,1041497,1044312,1026993,1044138,1043168,1043764,1043931,1037044,1041157,1042231,1042855,1037896,1033378,1042463,1043722,1042393,1026398,1043486,1027585,1043376,1043040,1027527,1042938,1044255,1037824,1042359,1035951,1034363,1033123,1041913,1042906,1043349,1041368,1038172,1042502,1042297,1042720,1032734,1043348,1040714,1037633,1018167,1043249,1039608,1043018,1012975,1041140,1038169,1027528,1041898,1041340,1043007,1042837,1038419,1032698,1044363,1044324,1043918,1043999,1044305,1041702,1044215,1036759,1039642,1024783,1035589,1044326,1033970,1044048,1034554,1039718,1043326,1027553,1042900,1042195,1038920,1038910,1044190,1037141,1043660,1043265,1043527,1027505,1041069,1041128,1044043,1044335,1030150,1027566,1021390,1043390,1039804,1037909,1044013,1039871,1038483,1043649,1036765,1042888,1041063,1039371,1043443,1036665,1044174,1043840,1043279,1044189,1035778,1024562,1021408,1027634,1039614,1037950,1043399,1043993,1043357,1028818,1043815,1043711,1043110,1042544,1044038,1032649,1020355,1043715,1029447,1026320,1036852,1037313,1027525,1043065,1043204,1041031,1039728,1043630,1044116,1040447,1039375,1036883,1023112,1027610,1031326,1027582,1039015,1044280,1040180,1039999,1041355,1041026,1041473,1044055,1027626,1033132,1037590,1043234,1039032,1044390,1028796,1043203,1037754,1041382,1044245,1027476,1042012,1044145,1044299,1042199,1035111,1041662,1037272,1044164,1027486,1042931,1043312,1041940,1043337,1039813,1027631,1031350,1042973,1035156,1041216,1041030,1043879,1043970,1041498,1032161,1037724,1041348,1043920,1041537,1027643,1041813,1043224,1044265,1040219,1038189,1043226,1033239,1039317,1043437,1043902,1038558,1043137,1039583,1041417,1038578,1043622,1039863,1042449,1039845,1040818,1028896,1041445,1043910,1043659,1040176,1042731,1034368,1034336,1043368,1042147,1042135,1044052,1040223,1044061,1042833,1044078,1027473,1043943,1040817,1040018,1027524,1040983,1038116,1044234,1043322,1043996,1041378,1030335,1043002,1042216,1043988,1039404,1040383,1043391,1038638,1020717,1042849,1040199,1044294,1036131,1027551,1037878,1041222,1036920,1041250,1040016,1021424,1044369,1043287,1041300,1044068,1037025,1043417,1034612,1043997,1040626,1042558,1043864,1044199,1038958,1044356,1040448,1041020,1039150,1043416,1044386,1042783,1041979,1044096,1043162,1044281,1037934,1040879,1033278,1043682,1043070,1037465,1042357,1041673,1024894,1043276,1036905,1037030,1041415,1040790,1039940,1043882,1043980,1044200,1039811,1040774,1039980,1026901,1044302,1034354,1040015,1043975,1039670,1020016,1027454,1027603,1042324,1041108,1035104,1041773,1042313,1036355,1027488,1042861,1044103,1034586,1044080,1027543,1044074,1043589,1027557,1027462,1038409,1042477,1038787,1043209,1041269,1031481,1043112,1043641,1027616,1044062,1044376,1043851,1043863,1042798,1042975,1040187,1041725,1023131,1043989,1036128,1039786,1042749,1042577,1044041,1035388,1044220,1043067,1044383,1034905,1035272,1044217,1039127,1042518,1027485,1041921,1040680,1040690,1042730,1043218,1043998,1042578,1044242,1027561,1043984,1040357,1043054,1027480,1044046,1043862,1042361,1044127,1044339,1038039,1038738,1034262,1041829,1043947,1037197,1043812,1041779,1043709,1042789,1034190,1044375,1037870,1044087,1042550,1043388,1041923,1027575,1041380,1043264,1027564,1014248,1039242,1034362,1040064,1034653,1042378,1039464,1039049,1016497,1043240,1027460,1038337,1042368,1043485,1042845,1044313,1035944,1042269,1035172,1036772,1039222,1040026,1042828,1027478,1041087,1042098,1039776,1026295,1037884,1043427,1043757,1041612,1043482,1030850,1041596,1036130,1038671,1035989,1034170,1042843,1040193,1042485,1022752,1032545,1042583,1043804,1029257,1041342,1043422,1040963,1044380,1043899,1034068,1040366,1033673,1042077,1042759,1044252,1030752,1039555,1043010,1034801,1044241,1042707,1041435,1039481,1039486,1043045,1044368,1043030,1036776,1035289,1043858,1042860,1043898,1043917,1039239,1022379,1039274,1039398,1041919,1041700,1042115,1040320,1038778,1036106,1043526,1040596,1028965,1027530,1042302,1037116,1042298,1027613,1043973,1041425,1040552,1027608,1044257,1040318,1042657,1034423,1042708,1035015,1044129,1042022,1042589,1042096,1042423,1043856,1038418,1041062,1043972,1044371,1033721,1036352,1041472,1027535,1043778,1042847,1039018,1043079,1043454,1036125,1043130,1043278,1043001,1034946,1023894,1041781,1032354,1043097,1038268,1040212,1033439,1037277,1041064,1029383,1044081,1037187,1030121,1027498,1038414,1034532,1035984,1040405,1042824,1040564,1044276,1041050,1042349,1037803,1036491,1044310,1043908,1042912,1036183,1030069,1036126,1044196,1043892,1018871,1041776,1042091,1040789,1043319,1027526,1039580,1042270,1027450,1041861,1020536,1021360,1043584,1028591,1008599,1037355,1044079,1044108,1039246,1044024,1041563,1027641,1030704,1041521,1017047,1016688,1035570,1035981,1035809,1040184,1043872,1038118,1043963,1027465,1035715,1040032,1044230,1039593,1034914,1036994,1042588,1041710,1038487,1030079,1043298,1043720,1037603,1043747,1031116,1042795,1043529,1041309,1038433,1040546,1040082,1034260,1043665,1039184,1041376,1025073,1034869,1038246,1044259,1027584,1039992,1042784,1031976,1044318,1041613,1043966,1041554,1027520,1043266,1037350,1040470,1043961,1042796,1043632,1039400,1037375,1040182,1041974,1043896,1043903,1022613,1044059,1027639,1029417,1044343,1027248,1041335,1019360,1033585,1039042,1027604,1027504,1042851,1043942,1043207,1043115,1043138,1043412,1043237,1041009,1044066,1027545,1027508,1036545,1044097,1027507,1038297,1040455,1039412,1041856,1043601,1041227,1039739,1043181,1040870,1041950,1044342,1027457,1044243,1043742,1031110,1018597,1038755,1042400,1044002,1044239,1027622,1027541,1040747,1036963,1043060,1043982,1040185,1043105,1043107,1043261,1044374,1043011,1039688,1043760,1037191,1039817,1042305,1010688,1037852,1027621,1037015,1036965,1044107,1044311,1038610,1044316,1043431,1039524,1040545,1043536,1043163,1027638,1043836,1027580,1036382,1044161,1044277,1042764,1032265,1042308,1043308,1043774,1043375,1027633,1036251,1043676,1031754,1044388,1014596,1043450,1024786,1043800,1035202,1023195,1040299,1040335,1032492,1027611,1040417,1037090,1035102,1043927,1027592,1043592,1044082,1044001,1028906,1044092,1027586,1038919,1043466,1042415,1041823,1041393,1042556,1035296,1040251,1040966,1042547,1036672,1039730,1040556,1038180,1044050,1043936,1027552,1039509,1026392,1041592,1040754,1043120,1042092,1044149,1043731,1040089,1043689,1027600,1037708,1043625,1043814,1040174,1040244,1042662,1042348,1042705,1043913,1018170,1041146,1041990,1043415,1043127,1042469,1043959,1043555,1027533,1027479,1043165,1038801,1044137,1039857,1044222,1042748,1036663,1044063,1042435,1040980,1043447,1023104,1043708,1027536,1044091,1041803,1043511,1042364,1036127,1036522,1044381,1029446,1042401,1042654,1031575,1036536,1043076,1037521,1043588,1044058,1041669,1027623,1035114,1034824,1041553,1043075,1037110,1036135,1044286,1027452,1038927,1043912,1040024,1042535,1043013,1026838,1044154,1043860,1042315,1027620,1037309,1041589,1038749,1044197,1043751,1034893,1038395,1043015,1042729,1042848,1040011,1043153,1043919,1041523,1041315,1042537,1044157,1035113,1036969,1040408,1043449,1043870,1043000,1043605,1027451,1043923,1041772,1037874,1044397,1042775,1037486,1039937,1042007,1043114,1044359,1027464,1044070,1043845,1042421,1035956,1038885,1043955,1042392,1042512,1039519,1043652,1038238,1035282,1036124,1042648,1043675,1043330,1027578,1034200,1043906,1043145,1043736,1041005,1043672,1044338,1044379,1043063,1039928,1044101,1038283,1043873,1044204,1038396,1044213,1043006,1038585,1043934,1041070,1038763,1039740,1044260,1034792,1042233,1037755,1043396,1043277,1041277,1041280,1027509,1035819,1027456,1041764,1044357,1040208,1039118,1037217,1027532,1044334,1044115,1042317,1037348,1044195,1043684,1042362,1042809,1044300,1043739,1041922,1034531,1038480,1023810,1036739,1024237,1043634,1027627,1027636,1044067,1043670,1035355,1036773,1034918,1038475,1041632,1031725,1035075,1040423,1033685,1042360,1039912,1038287,1027511,1042074,1038901,1037917,1041671,1027494,1024222,1040699,1039791,1043844,1043524,1041235,1044147,1042989,1043072,1038303,1043777,1043950,1036566,1035560,1024046,1043628,1039403,1039332,1020668,1034466,1034357,1016814,1043932,1041936,1042600,1039365,1044099,1042853,1044377,1044049,1044353,1043603,1039457,1029061,1026032,1027510,1039579,1025591,1042800,1033166,1027563,1044105,1038718,1041137,1044262,1031370,1033007,1041961,1039734,1035030,1043160,1041074,1038969,1042301,1042823,1042911,1043779,1043698,1024251,1044367,1036907,1037642,1036447,1041134,1043288,1030528,1044051,1044345,1041296,1039732,1027313,1040222,1039735,1043611,1040899,1043987,1037855,1022052,1040415,1044271,1042008,1038240,1035226,1043803,1044128,1041434,1042591,1043877,1027540,1042555,1039487,1032784,1027502,1043794,1038174,1040681,1042557,1042865,1044238,1042790,1044175,1034265,1039584,1033620,1027537,1039059,1044233,1042256,1042459,1039402,1043262,1042519,1027599,1043406,1037247,1038032,1040236,1038439,1043465,1042948,1038229,1041851,1039173,1039396,1044216,1027381,1037596,1040990,1043227,1027546,1038521,1038400,1032690,1041912,1035209,1041874,1041054,1033896,1043807,1043901,1041144,1043690,1033935,1020969,1035422,1043890,1038628,1018111,1027609,1043035,1034663,1041988,1037195,1043907,1042343,1038774,1035451,1042429,1044268,1041782,1027615,1040224,1039717,1043994,1034021,1043594,1039604,1035703,1043826,1044098,1036851,1043795,1044384,1041918,1040412,1043990,1041644,1038523,1043783,1043413,1044011,1027595,1044290,1031290,1043236,1038606,1038368,1043799,1044398,1042390,1019358,1035986,1043424,1027311,1040170,1040172,1041414,1038214,1041501,1042619,1042391,1040325,1027538,1031675,1033545,1042916,1044330,1039142,1043746,1036422,1043995,1038311,1038646,1037561,1041562,1044237,1037271,1028057,1044110,1044014,1019540,1039697,1043409,1043781,1027512,1043991,1038700,1043582,1042099,1044173,1032838,1027625,1037324,1039824,1043802,1044039,1041657,1034972,1044060,1027558,1044332,1037739,1027458,1036637,1044075,1038884,1044064,1042646,1038403,1043935,1021369,1040360,1044035,1042827,1027459,1039915,1026738,1044231,1027495,1044387,1042943,1041650,1039894,1043358,1042020,1042083,1044141,1044337,1044361]}},"isTealiumEnableForWhiteLabel":true,"isCCPAEnabled":true,"tealiumWhitelabelLanguageId":0,"tealiumAccount":"agoda","productId":0,"stopTealium":false,"tealiumExperiments":{"MKTBB-5389-M":"Z","MKTBB-5389-D":"Z","REMARKETING-TEST-1":"Z","REMARKETING-TEST-2":"Z","REMARKETING-TEST-3":"Z","REMARKETING-TEST-4":"Z","REMARKETING-TEST-5":"Z","MONEY-EXP-1":"Z","MONEY-EXP-2":"Z","MONEY-EXP-3":"Z","MONEY-EXP-4":"Z","MONEY-EXP-5":"Z"},"whiteLabelId":1,"supplierHotelId":0};
+
+var tealiumUrl = "//tags.tiqcdn.com/utag/agoda/main2018/prod/utag.js";
+    var isCCPAEnable = true;
+    var appSettingsPreferences = JSON.parse(localStorage.getItem("AppSettings.preferences"));
+    var cookieBanner = JSON.parse(localStorage.getItem("cookie-setting"));
+    var shouldTealiumEnable = (!isCCPAEnable || appSettingsPreferences == null || appSettingsPreferences.ccpa_status === "opt-in")
+                                      && (cookieBanner == null || cookieBanner === true || cookieBanner.isMarketingSelected === true);
+
+    function setCookie(cname, cvalue) {
+      var date = new Date();
+      date.setTime(date.getTime() + 86400000);
+      var expires = "expires=" + date.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + "; path=/; domain=.agoda.com;";
+    }
+
+
+        setCookie("tealiumEnable", shouldTealiumEnable, 1);
+        
+    if(shouldTealiumEnable){
+
+
+                isMockMode = document.getElementById("mockDataEnabled")
+                    ? document.getElementById("mockDataEnabled").value === "True"
+                    : false;
+
+                    if (!isMockMode) {
+                    var utag_data = { };
+
+                   window.utag_cfg_ovrd = window.utag_cfg_ovrd || {};
+                   window.utag_cfg_ovrd.waittimer = 3000;
+
+                           (function(a, b, c, d) {
+                            a = tealiumUrl;
+                            b = document;
+                            c = 'script';
+                            d = b.createElement(c);
+                            d.src = a;
+                            d.type = 'text/java' + c;
+                            d.async = true;
+                            a = b.getElementsByTagName(c)[0];
+                            a.parentNode.insertBefore(d, a);
+                        })();;
+                       
+               var sessionStatus = "parsingcookiefailed";
+               var sessionId = 0;
+               var isNewSession = 0;
+
+               try {
+                   var tealiumCookie = document.cookie.match('(^|;) ?utag_main=([^;]*)(;|$)')[2].split("$");
+                   sessionId = tealiumCookie.filter(function (x) { return x.startsWith("ses_id"); })
+                       .map(function (x) { return x.split(":"); })
+                       .map(function (x) { return parseInt(x[1].split("%3B")[0]); })
+                       .map(function (x) { return x == NaN ? 0 : x; })[0];
+                   sessionStatus = sessionId == 0 ? "invalid" : "valid";
+
+                   isNewSession = tealiumCookie.filter(function (x) { return x.startsWith("_ss"); })
+                       .map(function (x) { return x.split(":"); })
+                       .map(function (x) { return parseInt(x[1]); })
+                       .map(function (x) { return x == NaN ? 0 : x; })[0];
+               } catch (err) {}
+            }
+            }
+</script>
+
+    <script type="text/javascript">
+        var _ga = _ga || {};
+        _ga.source = "Direct Access";
+        _ga.medium = "Direct Access";
+    </script>
+    
+
+</body></html>

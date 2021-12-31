@@ -1,0 +1,24 @@
+
+# USER : "snowflakeusername"
+# password : "snowflakepassword"
+# account : "snowflakeaccount" # eg : snowflakeusername
+# database : "snowflakedatabase"
+# schema : "snowflakeschema"
+# mongo_server : "mongo server " eg:mongodb://localhost:27017/
+# mongo_database : "database name"
+# prediction_mongo_collection : "prediction mongo collection" eg: predictions
+# centroid_mongo_collection : "Centers of the cluster colletion" eg:Centers
+
+Default: 
+    mongo_server : "mongodb://localhost:27017/"
+    mongo_database : "sse_v2"
+    prediction_mongo_collection : "label_prediction"
+    centroid_mongo_collection : "ssev2_centers"
+Development: # inheraite Default so Default ko sabai veriable use garxa , and dynaconf use Development env as defult
+    name : "Developer"
+    USER : "PRABESH"
+    password : "Fuse!234"
+    account : "cla97133.us-east-1"
+    database : "FUSECLASSROOM"
+    schema : "FUSECLASSROOMAPPMONGOPROD"
+Production:

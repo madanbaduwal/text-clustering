@@ -1,0 +1,145 @@
+<html ng-app="bbwt" ng-controller="mainAppCtrl" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths k-webkit k-webkit77 ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title ng-bind="title" class="ng-binding"></title>
+
+    
+    <link href="/Content/css?v=oDR_IkHzjBSPEdXMxyeV8dOoAS610c5ltRHVjEHa_mM1" rel="stylesheet">
+
+    <!-- test comment -->
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/250e652d-4ad2-4133-b920-654f4cfdfe2f.css">
+    <link rel="icon" type="image/png" href="/Content/images/snapshot-favicon-source.png">
+    <link href="/Content/blueberry/wizard/wizard.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+          <script src="Scripts/IE8/html5.js"></script>
+          <script src="Scripts/IE8/respond.js"></script>
+          <style>
+              input[type=checkbox]{
+                  width:40px;
+              }
+              input[type=button]{
+                  width:auto;
+              }
+
+              input, select {
+                  width:100%;
+                  max-width:200px;
+              }
+              .form-control{margin:2px 2px 2px 2px;}
+
+              .form-inline
+              {
+                  white-space:nowrap;
+              }
+
+              .form-inline div, .form-inline input, .form-inline select, .form-inline label
+              {
+                  display:inline;
+              }
+
+              .form-inline input[type=checkbox]
+              {
+                  float:none !important;
+              }
+
+              img#tt{display:none;}
+          </style>
+      <![endif]-->
+    <script type="text/javascript">
+        //LOAD_RAYGUN_SCRIPT
+    </script>
+</head>
+<body data-status="" id="bbwt2" class="hidden" style="">
+    <div id="wrap" ng-class="!AuthSvc.IsLoggedIn ? 'full-height disabled-height-rule' : ''" class="full-height disabled-height-rule">
+        <cookie-banner id="cookieBanner"></cookie-banner>
+        <!-- ngIf: AuthSvc.IsLoggedIn -->
+
+        <nav class="hidden-print ng-hide" ng-show="AuthSvc.IsLoggedIn">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <ul class="col-lg-6 ng-scope" id="mainMenu" ng-controller="MenuCtrl"></ul>
+                    </div>
+
+                    <div class="col-lg-6 pull-right">
+                        <login></login>
+                        <change-ma class="hidden-xs hidden-sm"></change-ma>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        
+        <div ng-class="!AuthSvc.IsLoggedIn ? 'container-fluid full-height' : isNeedFullScreen ? 'container-fluid wrap-container' : 'container wrap-container'" ng-controller="LoginCtrl" class="ng-scope container-fluid full-height">
+            <!-- uiView: undefined --><ui-view class="ng-scope"></ui-view>
+        </div>
+
+    </div>
+
+    <span id="notification" style="display: none;"></span>
+
+    <!-- ngIf: AuthSvc.IsLoggedIn -->
+
+    <div class="progress-container ng-hide" ng-show="AuthSvc.progress || loadingTracker.active()">
+        <div class="busy-indicator"></div>
+    </div>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/bundles/jquery?v=TTjzvYzWxT7Ch7JVbh-WpB55qFn5oX32drqgxAEkuxM1"></script>
+
+    <script src="/bundles/passmeter?v=8m1XRglY962iFk4L-hNuok6TuiYhdgh2btP6DksNHS41"></script>
+
+    <script src="/bundles/angular?v=OiOT27mhv_Ql2VnKoT0BxHbgQ7jAyFmPTcIB9H1xeCY1"></script>
+
+    
+    <script src="/Scripts/angular/angular-animate.min.js"></script>
+
+    <script src="/bundles/kendo?v=kY5YMdrq5JXYjNIEljfnPPvmyIN4k633pSM60dancH01"></script>
+
+    
+    <script src="/Scripts/angular/angular-kendo.js"></script>
+
+    <script src="/bundles/moment?v=btFFQ0U9wQxMaEK0yaqy5o4N_F1ZTSvvsGInFLm_zGk1"></script>
+
+    <script src="/bundles/localization?v=oedax7mNBiwt_XzG8LI-svGYNIKcnMISMrCqIqpLSEc1"></script>
+
+    <script src="/bundles/application?v=PFTnRHjgU9-E6uMG_oUtFb4E8Wdo5V8XutzQEyO6WM81"></script>
+
+
+    <script type="text/javascript" src="/Scripts/jsnlog.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+(function () {
+JL.setOptions({"clientIP": "34.235.222.35", "requestId": "348ff511-b232-403e-891e-34d424f6df4f", "enabled": true});
+var logger=JL("");
+logger.setOptions({"level": 1000});
+}());
+//]]>
+</script>
+
+
+    <script type="text/javascript">
+        //we have added Raygun for this #179756
+        //$(function () {
+        //    window.onerror = function (msg, url, linenumber) {
+        //        JL("exceptionlogger").fatal(
+        //            'Message: ' + msg + '\nURL: ' + url + '\nLine: ' + linenumber);
+        //        return true;
+        //    };
+        //});
+
+            
+                var currentUser = null;
+                var currentPermissions = [];
+                var allowedUrls = [{"Key":"DOCUMENT_CHECKFILEEXISTENCE","Url":"api/Document/CheckFileExistence","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"DOCUMENTTEMPLATE_CHECKFILEEXISTENCE","Url":"api/DocumentTemplate/CheckFileExistence","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"DOCUMENTTEMPLATE_ADDDOCUMENTTEMPLATESTOWORKFLOW","Url":"api/DocumentTemplate/AddDocumentTemplatesToWorkflow","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTTEMPLATE_DELETEDOCUMENTTEMPLATESTOWORKFLOW","Url":"api/DocumentTemplate/DeleteDocumentTemplatesToWorkflow","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTTEMPLATE_GETALLDOCUMENTTEMPLATESFORWORKFLOWTYPE","Url":"api/DocumentTemplate/GetAllDocumentTemplatesForWorkflowType","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"DOCUMENTTEMPLATE_GETADDEDDOCUMENTTEMPLATESFORWORKFLOW","Url":"api/DocumentTemplate/GetAddedDocumentTemplatesForWorkflow","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"DOCUMENTTEMPLATE_RETIRETEMPLATE","Url":"api/DocumentTemplate/RetireTemplate","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"KPI_GETPERSONALKPISUMMARY","Url":"api/KPI/GetPersonalKPISummary","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"KPI_GETALLPERSONALPROPERTIESWITHRAG","Url":"api/KPI/GetAllPersonalPropertiesWithRAG","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETALLPROPERTIESWITHRAGFORCURRENTUSER","Url":"api/KPI/GetAllPropertiesWithRAGForCurrentUser","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETALLPROPERTIESWITHRAGFORTEAMMANAGER","Url":"api/KPI/GetAllPropertiesWithRAGForTeamManager","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETPERSONALPERSONRESPONSIBLEKPI","Url":"api/KPI/GetPersonalPersonResponsibleKPI","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"PROPERTY_GETUSERPROPERTIES","Url":"api/Property/GetUserProperties","IsReturnArray":true,"HttpMethod":"POST"},{"Key":"PROPERTY_GETUSERPROPERTIESBYLANDLORDID","Url":"api/Property/GetUserPropertiesByLandlordId","IsReturnArray":true,"HttpMethod":"POST"},{"Key":"STAGEINSTANCE_GETPERSONALOUTSTANDINGSTAGES","Url":"api/StageInstance/GetPersonalOutstandingStages","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"FILE_DOWNLOADDOCUMENTFILE","Url":"api/File/DownloadDocumentFile","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"FILE_DOWNLOADTEMPLATEDOCUMENTFILE","Url":"api/File/DownloadTemplateDocumentFile","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"FILE_UPLOADDOCUMENTFILE","Url":"api/File/UploadDocumentFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"FILE_TEST","Url":"api/File/Test","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"FILE_UPLOADDOCUMENTTEMPLATEFILE","Url":"api/File/UploadDocumentTemplateFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"WORKFLOWTYPE_GETWORKFLOWTYPESWITHOUTPROPERTIESFORCURRENTUSER","Url":"api/WorkflowType/GetWorkflowTypesWithoutPropertiesForCurrentUser","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"WORKFLOWTYPE_GETWORKFLOWTYPESWITHOUTPROPERTIESFORTEAMMANAGER","Url":"api/WorkflowType/GetWorkflowTypesWithoutPropertiesForTeamManager","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"WORKFLOWTYPE_GETWORKFLOWTYPESWITHOUTPROPERTIESFORPERSONALUSER","Url":"api/WorkflowType/GetWorkflowTypesWithoutPropertiesForPersonalUser","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"WORKFLOWTYPE_GETWORKFLOWTYPESWITHOUTPROPERTIESFORPARTNERDIRECTOR","Url":"api/WorkflowType/GetWorkflowTypesWithoutPropertiesForPartnerDirector","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"WORKFLOWSTATUS_GETALL","Url":"api/WorkflowStatus/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"SQLBROWSER_GETDATABASES","Url":"api/SqlBrowser/GetDatabases","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"SQLBROWSER_GETTABLES","Url":"api/SqlBrowser/GetTables","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"SQLBROWSER_GETCOLUMNS","Url":"api/SqlBrowser/GetColumns","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"SQLBROWSER_RUNQUERY","Url":"api/SqlBrowser/RunQuery","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"PROPERTYTYPE_GET","Url":"api/PropertyType/Get","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"QUERY_ISCKUSERFORQUERY","Url":"api/Query/IsCKUserForQuery","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_ISABLETOCLOSEWHENQUERYREQUESCLOSED","Url":"api/Query/IsAbleToCloseWhenQueryRequesClosed","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_ISABLETOCLOSEWHENQUERYOPEN","Url":"api/Query/IsAbleToCloseWhenQueryOpen","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_ISABLEREOPENCLOSEDQUERY","Url":"api/Query/IsAbleReopenClosedQuery","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_ISCKASSISTENT","Url":"api/Query/IsCKAssistent","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_QUERYPERMISSIONSFORCURRENTUSER","Url":"api/Query/QueryPermissionsForCurrentUser","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_GETQUERIESNAVIGATIONINFO","Url":"api/Query/GetQueriesNavigationInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_ISTHESAMEROLEASAPPLICABLE","Url":"api/Query/IsTheSameRoleAsApplicable","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"QUERY_DOWNLOADQUERIESIMPORTTEMPLATE","Url":"api/Query/DownloadQueriesImportTemplate","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"MANAGINGAGENTLOGO_GETCURRENTMALOGOINBASE64","Url":"api/ManagingAgentLogo/GetCurrentMAlogoInBase64","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"MANAGINGAGENTLOGO_GETCURRENTMALOGO","Url":"api/ManagingAgentLogo/GetCurrentMAlogo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"PERMISSIONS_GETALLPERMISSIONS","Url":"api/Permissions/GetAllPermissions","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"PERMISSIONS_FORBIDDEN","Url":"api/Permissions/Forbidden","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"PERMISSIONS_GETALLOWEDWEBAPIMETHODS","Url":"api/Permissions/GetAllowedWebAPIMethods","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"MENU_GETMENU","Url":"api/Menu/GetMenu","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EMAILTEMPLATE_GETALLTEMPLATES","Url":"api/EmailTemplate/GetAllTemplates","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EMAILTEMPLATE_GETTEMPLATEBYID","Url":"api/EmailTemplate/GetTemplateById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EMAILTEMPLATE_GETTEMPLATEBYCODE","Url":"api/EmailTemplate/GetTemplateByCode","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EMAILTEMPLATE_SAVETEMPLATE","Url":"api/EmailTemplate/SaveTemplate","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"QUERYSTATUS_GETALL","Url":"api/QueryStatus/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"WORKFLOWMETRIC_FIND","Url":"api/WorkflowMetric/Find","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"OCRREGEXES_EXPORT","Url":"api/OCRRegexes/Export","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"OCRREGEXES_IMPORT","Url":"api/OCRRegexes/Import","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"OCRREGEXES_GETALL","Url":"api/OCRRegexes/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"OCRREGEXES_SAVEALL","Url":"api/OCRRegexes/SaveAll","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"WORKFLOWINSTANCE_ISONHOLDCHANGINGALLOWED","Url":"api/WorkflowInstance/IsOnHoldChangingAllowed","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWINSTANCE_CANSEEQUERYMANAGEMENT","Url":"api/WorkflowInstance/CanSeeQueryManagement","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWINSTANCE_GETCURRENTSTAGEINFO","Url":"api/WorkflowInstance/GetCurrentStageInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWINSTANCE_GETACTIVEPROPERTYINFO","Url":"api/WorkflowInstance/GetActivePropertyInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWINSTANCE_ISEXISTMETRICFILE","Url":"api/WorkflowInstance/IsExistMetricFile","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWINSTANCE_IMPORTMETRICS","Url":"api/WorkflowInstance/ImportMetrics","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETALLBYYEAREND","Url":"api/ExpenditureView/GetAllByYearEnd","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETSTATISTICS","Url":"api/ExpenditureView/GetStatistics","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_CONFIRMMATCH","Url":"api/ExpenditureView/ConfirmMatch","IsReturnArray":false,"HttpMethod":"PUT"},{"Key":"EXPENDITUREVIEW_GETASSIGNEDPAGES","Url":"api/ExpenditureView/GetAssignedPages","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETASSIGNEDEXPENDITUREITEMS","Url":"api/ExpenditureView/GetAssignedExpenditureItems","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETALLASSIGNEDPAGESFOREXPENDITUREVIEW","Url":"api/ExpenditureView/GetAllAssignedPagesForExpenditureView","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_CHANGESELECTEDCONFIRMATION","Url":"api/ExpenditureView/ChangeSelectedConfirmation","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"EXPENDITUREVIEW_UNCONFIRMMATCH","Url":"api/ExpenditureView/UnconfirmMatch","IsReturnArray":false,"HttpMethod":"PUT"},{"Key":"EXPENDITUREVIEW_CONFIRMPAGE","Url":"api/ExpenditureView/ConfirmPage","IsReturnArray":false,"HttpMethod":"PUT"},{"Key":"EXPENDITUREVIEW_GETREFERENCINGRESULTSBYEXPENDITUREREPORTITEMID","Url":"api/ExpenditureView/GetReferencingResultsByExpenditureReportItemId","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETITEMONLYWITHREQUIREDFIELDS","Url":"api/ExpenditureView/GetItemOnlyWithRequiredFields","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_REQUESTDEPENDENCIESDATA","Url":"api/ExpenditureView/RequestDependenciesData","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"EXPENDITUREVIEW_GETOCRRESULT","Url":"api/ExpenditureView/GetOCRResult","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETOCRPAGEBYID","Url":"api/ExpenditureView/GetOCRPageById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"EXPENDITUREVIEW_GETREFERENCINGBOUNDARIES","Url":"api/ExpenditureView/GetReferencingBoundaries","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"REGION_FIND","Url":"api/Region/Find","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"PERMISSIONEXPOSITION_GETPERMISSIONCATEGORIES","Url":"api/PermissionExposition/GetPermissionCategories","IsReturnArray":true,"HttpMethod":"POST"},{"Key":"PERMISSIONEXPOSITION_GETENTITYUSERPERMISSIONS","Url":"api/PermissionExposition/GetEntityUserPermissions","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"PERMISSIONEXPOSITION_GETPERMISSIONCODEGROUPS","Url":"api/PermissionExposition/GetPermissionCodeGroups","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTTEMPLATE_CREATE","Url":"api/DocumentTemplate/Create","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTTEMPLATE_UPDATE","Url":"api/DocumentTemplate/Update","IsReturnArray":false,"HttpMethod":"PUT"},{"Key":"DOCUMENTTEMPLATE_DELETE","Url":"api/DocumentTemplate/Delete","IsReturnArray":false,"HttpMethod":"DELETE"},{"Key":"ERRORHANDLING_THROWEXCEPTION","Url":"api/ErrorHandling/ThrowException","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_GETUSERSETTINGS","Url":"api/Users/GetUserSettings","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_GETALLUSERS","Url":"api/Users/GetAllUsers","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"USERS_GETUSERBYID","Url":"api/Users/GetUserById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_GETCKUSERBYID","Url":"api/Users/GetCKUserById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_GETMAUSERBYID","Url":"api/Users/GetMAUserById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_GETUSERBYIDFORCHANGINGMA","Url":"api/Users/GetUserByIdForChangingMA","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_REGISTERUSER","Url":"api/Users/RegisterUser","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_GETUSERBYTICKET","Url":"api/Users/GetUserByTicket","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_GETADUSERBYSAMACCOUNTNAME","Url":"api/Users/GetADUserBySamaccountname","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_CONFIRMUSER","Url":"api/Users/ConfirmUser","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_RESETREGISTERTICKET","Url":"api/Users/ResetRegisterTicket","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_ADDCKUSER","Url":"api/Users/AddCKUser","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_ADDMAUSER","Url":"api/Users/AddMAUser","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_SENDINVITE","Url":"api/Users/SendInvite","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_SAVEUSER","Url":"api/Users/SaveUser","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_UPDATEUSERSTEAM","Url":"api/Users/UpdateUsersTeam","IsReturnArray":false,"HttpMethod":"PUT"},{"Key":"USERS_CHANGEMANAGINGAGENT","Url":"api/Users/ChangeManagingAgent","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_GETCURRENTUSERID","Url":"api/Users/GetCurrentUserId","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"USERS_CHANGEPASSWORD","Url":"api/Users/ChangePassword","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_RECOVERPASSWORD","Url":"api/Users/RecoverPassword","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"USERS_SENDPASSWORDRESETBYADMIN","Url":"api/Users/SendPasswordResetByAdmin","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"LANGUAGE_DELETELANGUAGE","Url":"api/Language/DeleteLanguage","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"LANGUAGE_CREATELANGUAGE","Url":"api/Language/CreateLanguage","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"LANGUAGE_GETAVAILABLEANGULARCULTURES","Url":"api/Language/GetAvailableAngularCultures","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"LANGUAGE_GETAVAILABLEKENDOCULTURES","Url":"api/Language/GetAvailableKendoCultures","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"LANGUAGE_ADDANGULARCULTUREFILE","Url":"api/Language/AddAngularCultureFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"LANGUAGE_ADDKENDOCULTUREFILE","Url":"api/Language/AddKendoCultureFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"LANGUAGE_EXPORTLANGUAGE","Url":"api/Language/ExportLanguage","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"LANGUAGE_IMPORTLANGUAGE","Url":"api/Language/ImportLanguage","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"MANAGINGAGENT_GETCURRENTMANAGINGAGENT","Url":"api/ManagingAgent/GetCurrentManagingAgent","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"MANAGINGAGENT_GETCURRENTMANAGINGAGENTAMBERTHRESHOLD","Url":"api/ManagingAgent/GetCurrentManagingAgentAmberThreshold","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"REQUIREDDOCUMENT_FIND","Url":"api/RequiredDocument/Find","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTCATEGORY_GETALL","Url":"api/DocumentCategory/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETALLKPI","Url":"api/KPI/GetAllKPI","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETKPIBYPROPERTY","Url":"api/KPI/GetKPIByProperty","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETKPISUMMARY","Url":"api/KPI/GetKPISummary","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"KPI_GETTEAMSKPISUMMARY","Url":"api/KPI/GetTeamsKPISummary","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"KPI_GETPERSONRESPONSIBLEKPI","Url":"api/KPI/GetPersonResponsibleKPI","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"KPI_GETPERSONRESPONSIBLEKPIFORTEAMMANAGER","Url":"api/KPI/GetPersonResponsibleKPIForTeamManager","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"APPROVALRESPONSIBILITY_GETALL","Url":"api/ApprovalResponsibility/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"OFFICE_FIND","Url":"api/Office/Find","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"STAGEINSTANCE_REVERTTOPREVIOUSSTAGE","Url":"api/StageInstance/RevertToPreviousStage","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"STAGEINSTANCE_GETOUTSTANDINGSTAGES","Url":"api/StageInstance/GetOutstandingStages","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"STAGEINSTANCE_GETTEAMOUTSTANDINGSTAGES","Url":"api/StageInstance/GetTeamOutstandingStages","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"STAGEINSTANCE_GETFULLSTAGEINSTANCEINFO","Url":"api/StageInstance/GetFullStageInstanceInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"AUTH_CURRENTUSER","Url":"api/Auth/CurrentUser","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"AUTH_LOGIN","Url":"api/Auth/Login","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"AUTH_LOGOUT","Url":"api/Auth/Logout","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"AUTH_PERMISSIONS","Url":"api/Auth/Permissions","IsReturnArray":true,"HttpMethod":"POST"},{"Key":"REPORTAPROBLEM_SEND","Url":"api/ReportaProblem/Send","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"TEAM_FIND","Url":"api/Team/Find","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"TEAM_FINDBYMANAGERID","Url":"api/Team/FindByManagerId","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"TEAM_GETMEMBERSFORMANAGER","Url":"api/Team/GetMembersForManager","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"TEAM_GETMEMBERSFORUSER","Url":"api/Team/GetMembersForUser","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"REPORTS_GETREPORTPARAMETERS","Url":"api/Reports/GetReportParameters","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"REPORTS_GETREPORTINFO","Url":"api/Reports/GetReportInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"REPORTS_GETREPORTINFOBYID","Url":"api/Reports/GetReportInfoById","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"REPORTS_EXPORT","Url":"api/Reports/Export","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"REPORTS_SAVEREPORT","Url":"api/Reports/SaveReport","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"MALEDGERCODE_GETALL","Url":"api/MaLedgerCode/GetAll","IsReturnArray":true,"HttpMethod":"GET"},{"Key":"DOCUMENTSOCR_GETPAGEIMAGEBYPARSEDTEXT","Url":"api/DocumentsOCR/GetPageImageByParsedText","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"DOCUMENTSOCR_GETPAGEIMAGEBYOCRPAGE","Url":"api/DocumentsOCR/GetPageImageByOCRPage","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"DOCUMENTSOCR_ASSIGNINVOICE","Url":"api/DocumentsOCR/AssignInvoice","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTSOCR_DELETEOCRPAGE","Url":"api/DocumentsOCR/DeleteOCRPage","IsReturnArray":false,"HttpMethod":"DELETE"},{"Key":"DOCUMENTSOCR_SETSCORES","Url":"api/DocumentsOCR/SetScores","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"DOCUMENTSOCR_GETMAXSCORREDPAGEBYEXPENDITUREREPORTROWID","Url":"api/DocumentsOCR/GetMaxScorredPageByExpenditureReportRowId","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"SETTINGS_LOAD","Url":"api/Settings/Load","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"SETTINGS_SAVE","Url":"api/Settings/Save","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"SETTINGS_GETSERVERINFO","Url":"api/Settings/GetServerInfo","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"FILE_DOWNLOADPROPERTIESIMPORTTEMPLATE","Url":"api/File/DownloadPropertiesImportTemplate","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"FILE_DOWNLOADLANDLORDSIMPORTTEMPLATE","Url":"api/File/DownloadLandlordsImportTemplate","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"FILE_REPLACEFILE","Url":"api/File/ReplaceFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"FILE_REPLACEDOCUMENTTEMPLATEFILE","Url":"api/File/ReplaceDocumentTemplateFile","IsReturnArray":false,"HttpMethod":"POST"},{"Key":"WORKFLOWTYPE_FIND","Url":"api/WorkflowType/Find","IsReturnArray":false,"HttpMethod":"GET"},{"Key":"WORKFLOWTYPE_GETALL","Url":"api/WorkflowType/GetAll","IsReturnArray":true,"HttpMethod":"GET"}];
+            
+
+    </script>
+
+    <script type="text/javascript">
+        //SET_RAYGUN_SETTINGS
+    </script>
+
+
+</body></html>
